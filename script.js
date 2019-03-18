@@ -1,3 +1,4 @@
+
 // ----- AWARDS YEAR SORTING ----- //
 
 let awardsYear = document.querySelectorAll('.awards-year');
@@ -26,11 +27,17 @@ function mobileMenuToggle(){
 			} else {
 				hamburgerMenu.classList.add('is-active');
                 mobileMenu.style.width = '200px';
+                let sidemenuItems = document.querySelectorAll('nav ul li');
+                sidemenuItems.forEach(item => item.addEventListener("click", () =>{
+                    hamburgerMenu.classList.remove('is-active');
+				    mobileMenu.style.width = 0;
+                }));
 			}
 		});
 };
-
 mobileMenuToggle();
+
+// ----- SCROLL VISIBILITY FUNCTION ----- //
 
 window.addEventListener('scroll', function() {
 	let triggeredHonors;
