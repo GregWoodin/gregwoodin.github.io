@@ -31,3 +31,12 @@ function mobileMenuToggle(){
 };
 
 mobileMenuToggle();
+
+window.addEventListener('scroll', function() {
+	let triggeredHonors;
+    if(window.scrollY > 150 && triggeredHonors !== true) {
+        document.querySelector('#awards').style.opacity = "1";
+        triggeredHonors = true;
+    }
+
+});

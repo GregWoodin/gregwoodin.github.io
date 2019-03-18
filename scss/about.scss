@@ -8,7 +8,7 @@
 
     .image{
         background-image: url(../img/profile-pic.jpg);
-        background-position: center;
+        background-position: 50% 30%;
         background-repeat: no-repeat;
         background-size: cover;
         height: 270px;
@@ -33,12 +33,19 @@
 @media only screen and (max-width: $large-phone-sizing){
     .about-container{
         grid-template-columns: 1fr;
+        justify-items: center;
         grid-template-areas:
             "image"
             "text";
+
+        .image{
+            width: 250px;
+            height: 250px;
+        }
     }
 
     .about-text-container{
         height: 100%;
+        z-index: 15;
     }
 }
