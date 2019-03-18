@@ -1,0 +1,110 @@
+header{
+    background-image: url(../img/header-pic.jpg);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 180px;
+    box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1{
+    display: inline;
+    background: $pale-green;
+    background-image: linear-gradient(145deg, rgba(255,255,255,0), rgba(255,255,255,0.2));
+    font-size: 50px;
+    color: black;
+    font-weight: 100;
+    padding: 0px 10px;
+    box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    align-self: flex-start;
+}
+
+nav{
+    background: $pale-green;
+    background-image: linear-gradient(145deg, rgba(255,255,255,0), rgba(255,255,255,0.2));
+    align-self: flex-end;
+    box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    transition: 0.5s ease;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+    
+    }  
+    
+    li{
+        display: inline;
+        list-style-type: none;
+        padding: 10px;
+        transition: all 0.5s ease;
+
+        &:hover{
+            color: white;
+            background-color: rgba(0,0,0,0.2);
+        }
+    }
+    
+    a{
+        color: inherit;
+        text-decoration: none;
+        
+        display: block;
+
+        
+    }
+}
+
+#hamburger-menu{
+    display: none;
+    background-color: #CFE6E0;
+    padding: 5px;
+    transition: 0.5s ease;
+}
+
+@media only screen and (max-width: $large-phone-sizing) {
+    header{
+        height: auto;
+    }
+    #hamburger-menu{
+        display: block;
+        z-index: 15;
+    }
+    nav{
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 0px;
+        z-index: 11;
+        background-color: $teal;
+        overflow: hidden;
+
+        ul{
+            flex-direction: column;
+            margin-top: 100px;
+
+            li{
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .header-content{
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: $small-phone-sizing) {
+    h1{
+        font-size: 31px;
+    }
+}
