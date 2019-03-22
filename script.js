@@ -45,7 +45,7 @@ mobileMenuToggle();
 // ----- DYNAMIC MAIN START POINT ----- //
 function setWelcomeSectionHeight(){
 	let headerHeight = document.querySelector('header').clientHeight;
-	document.querySelector('main').style.paddingTop = headerHeight + "px";
+	document.querySelector('main').style.paddingTop = headerHeight + 40 + "px";
 }
 setWelcomeSectionHeight();
 

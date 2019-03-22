@@ -53,12 +53,14 @@ h2{
 }
 
 h3{
-    margin-bottom: 5px;
+    font-size: 24px;
 }
 
 p{
-    margin-top: 5px;
+    font-size: 18px;
+    color: $paragraph-text;
 }
+
 
 a{
     text-decoration: none;
@@ -68,7 +70,8 @@ a{
 
 //----- SECTIONS -----//
 #about{
-    background-color: rgba(167, 239, 214, 0.2);
+    // background-color: rgba(167, 239, 214, 0.2);
+    // background-color: $pale-green;
 }
 
 #education{
