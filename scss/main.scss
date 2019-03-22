@@ -1,12 +1,14 @@
-$tablet-sizing: 970px;
+$tablet-sizing: 920px;
 $large-phone-sizing: 601px;
 $small-phone-sizing: 460px;
 
 $pale-green: #CFE6E0;
 $teal: #98D9C2;
+$paragraph-text: #4A5759;
 
 @import "header.scss";
 @import "globals.scss";
 @import "about.scss";
 @import "awards.scss";
-@import "education.scss"
+@import "education.scss";
+@import "twitter.scss";

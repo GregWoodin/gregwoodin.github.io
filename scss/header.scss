@@ -1,21 +1,40 @@
 header{
     background-image: url(../img/header-pic.jpg);
-    background-position: top center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 180px;
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    position: fixed;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    z-index: 12;
 }
+
+
 
 .header-content{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     height: 100%;
+    transition: 0.5s ease-in-out;
 }
 
+.header-shrink{
+    height: 80px;
+    align-items: center;
+}
+.header-content-shrink{
+    flex-direction: row;
+    
+}
+
+.h1-shrink{
+    font-size: 30px;
+}
 h1{
-    display: inline;
+    display: block;
     background: $pale-green;
     background-image: linear-gradient(145deg, rgba(255,255,255,0), rgba(255,255,255,0.2));
     font-size: 50px;
@@ -24,6 +43,7 @@ h1{
     padding: 0px 10px;
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
     align-self: flex-start;
+    transition: 0.5s ease-in-out;
 }
 
 nav{
@@ -63,14 +83,14 @@ nav{
 
 #hamburger-menu{
     display: none;
-    background-color: #CFE6E0;
+    position: relative;
     padding: 5px;
     transition: 0.5s ease;
 }
-
-@media only screen and (max-width: $large-phone-sizing) {
+@media only screen and (max-width: $tablet-sizing) {
     header{
-        height: auto;
+        height: 103px;
+        position: fixed;
     }
     #hamburger-menu{
         display: block;
@@ -78,7 +98,7 @@ nav{
     }
     nav{
         display: block;
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         right: 0;
@@ -92,7 +112,8 @@ nav{
             margin-top: 100px;
 
             li{
-                margin-top: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
             }
         }
     }
@@ -101,9 +122,21 @@ nav{
         flex-direction: row;
         align-items: center;
     }
+
+}
+@media only screen and (max-width: $large-phone-sizing) {
+    header{
+        height: 90px;
+    }
+    h1{
+        font-size: 40px;
+    }
 }
 
 @media only screen and (max-width: $small-phone-sizing) {
+    header{
+        height: 77px;
+    }
     h1{
         font-size: 31px;
     }

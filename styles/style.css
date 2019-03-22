@@ -1,10 +1,14 @@
 header {
   background-image: url(../img/header-pic.jpg);
-  background-position: top center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 180px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  z-index: 12;
 }
 
 .header-content {
@@ -12,10 +16,24 @@ header {
   justify-content: space-between;
   flex-direction: column;
   height: 100%;
+  transition: 0.5s ease-in-out;
+}
+
+.header-shrink {
+  height: 80px;
+  align-items: center;
+}
+
+.header-content-shrink {
+  flex-direction: row;
+}
+
+.h1-shrink {
+  font-size: 30px;
 }
 
 h1 {
-  display: inline;
+  display: block;
   background: #CFE6E0;
   background-image: linear-gradient(145deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2));
   font-size: 50px;
@@ -24,6 +42,7 @@ h1 {
   padding: 0px 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   align-self: flex-start;
+  transition: 0.5s ease-in-out;
 }
 
 nav {
@@ -55,14 +74,15 @@ nav a {
 
 #hamburger-menu {
   display: none;
-  background-color: #CFE6E0;
+  position: relative;
   padding: 5px;
   transition: 0.5s ease;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 920px) {
   header {
-    height: auto;
+    height: 103px;
+    position: fixed;
   }
 
   #hamburger-menu {
@@ -72,7 +92,7 @@ nav a {
 
   nav {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     right: 0;
@@ -86,7 +106,8 @@ nav a {
     margin-top: 100px;
   }
   nav ul li {
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .header-content {
@@ -94,7 +115,20 @@ nav a {
     align-items: center;
   }
 }
+@media only screen and (max-width: 601px) {
+  header {
+    height: 90px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+}
 @media only screen and (max-width: 460px) {
+  header {
+    height: 77px;
+  }
+
   h1 {
     font-size: 31px;
   }
@@ -114,6 +148,10 @@ body {
   background: linear-gradient(to bottom, #CFE6E0, #fff);
 }
 
+main {
+  transition: 0.5s ease-in-out;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1280px;
@@ -121,6 +159,7 @@ body {
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
+  transition: 0.5s ease-in-out;
 }
 
 h2 {
@@ -157,7 +196,11 @@ a {
   color: inherit;
 }
 
-@media only screen and (max-width: 970px) {
+#about {
+  background-color: rgba(167, 239, 214, 0.2);
+}
+
+@media only screen and (max-width: 920px) {
   .container {
     width: 85%;
   }
@@ -179,7 +222,7 @@ a {
   background-position: 50% 30%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 270px;
+  height: 100%;
   width: 100%;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   grid-area: image;
@@ -188,7 +231,7 @@ a {
 .about-text-container {
   background-color: rgba(255, 255, 255, 0.63);
   padding: 30px;
-  height: 80%;
+  height: 100%;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   width: 100%;
   display: flex;
@@ -203,7 +246,7 @@ a {
     justify-items: center;
     grid-template-areas: "image" "text";
   }
-  .about-container .image {
+  .about-container .profile-image {
     width: 250px;
     height: 250px;
   }
@@ -248,6 +291,7 @@ a {
 }
 .awards-content-inner p {
   margin-bottom: 30px;
+  color: #4A5759;
 }
 
 .awards-years {
@@ -338,6 +382,13 @@ a {
     flex-direction: column;
     height: 200px;
   }
+}
+.twitter-container {
+  text-align: center;
+}
+
+.twitter-timeline {
+  width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */

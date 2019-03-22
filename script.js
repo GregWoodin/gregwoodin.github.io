@@ -22,10 +22,15 @@ function mobileMenuToggle(){
 		hamburgerMenu.addEventListener('click', function(){
 			if (hamburgerMenu.classList.contains('is-active')){
 				hamburgerMenu.classList.remove('is-active');
-				mobileMenu.style.width = 0;
+                mobileMenu.style.width = 0;
+                hamburgerMenu.style.left = "0";
 
 			} else {
-				hamburgerMenu.classList.add('is-active');
+                hamburgerMenu.classList.add('is-active');
+                
+                if (document.querySelector('body').clientWidth > 601){
+                    hamburgerMenu.style.left = "30px";
+                }
                 mobileMenu.style.width = '200px';
                 let sidemenuItems = document.querySelectorAll('nav ul li');
                 sidemenuItems.forEach(item => item.addEventListener("click", () =>{
@@ -37,13 +42,48 @@ function mobileMenuToggle(){
 };
 mobileMenuToggle();
 
+// ----- DYNAMIC MAIN START POINT ----- //
+function setWelcomeSectionHeight(){
+	let headerHeight = document.querySelector('header').clientHeight;
+	document.querySelector('main').style.paddingTop = headerHeight + "px";
+}
+setWelcomeSectionHeight();
+
+function fixNavBug () {
+    window.addEventListener('resize', () =>{
+        if (document.querySelector('body').clientWidth > 920){
+            document.querySelector('nav').style.width = "auto";
+        }
+        if (document.querySelector('body').clientWidth < 920){
+            document.querySelector('nav').style.width = "0";
+        }
+    })
+}
+
+fixNavBug();
+
 // ----- SCROLL VISIBILITY FUNCTION ----- //
 
 window.addEventListener('scroll', function() {
+    console.log(window.scrollY);
 	let triggeredHonors;
-    if(window.scrollY > 150 && triggeredHonors !== true) {
+    if(window.scrollY > 50 && triggeredHonors !== true) {
         document.querySelector('#awards').style.opacity = "1";
         triggeredHonors = true;
     }
-
+    if (window.scrollY > 50){
+        document.querySelector('header').classList.add("header-shrink");
+        document.querySelector('.header-content').classList.add("header-content-shrink");
+        document.querySelector('h1').classList.add("h1-shrink");
+        //setWelcomeSectionHeight();
+    }
+    if (window.scrollY < 50){
+        document.querySelector('header').classList.remove("header-shrink");
+        document.querySelector('.header-content').classList.remove("header-content-shrink");
+        document.querySelector('h1').classList.remove("h1-shrink");
+        console.log("Hello");
+        //setWelcomeSectionHeight();
+    }
+        
 });
+
