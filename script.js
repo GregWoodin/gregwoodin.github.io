@@ -65,7 +65,7 @@ fixNavBug();
 // ----- SCROLL VISIBILITY FUNCTION ----- //
 
 window.addEventListener('scroll', function() {
-    console.log(window.scrollY);
+    //console.log(window.scrollY);
 	let triggeredHonors;
     if(window.scrollY > 50 && triggeredHonors !== true) {
         document.querySelector('#awards').style.opacity = "1";
@@ -81,9 +81,29 @@ window.addEventListener('scroll', function() {
         document.querySelector('header').classList.remove("header-shrink");
         document.querySelector('.header-content').classList.remove("header-content-shrink");
         document.querySelector('h1').classList.remove("h1-shrink");
-        console.log("Hello");
         //setWelcomeSectionHeight();
     }
         
 });
+
+//----- HIDE NAV ON SCROLL DOWN, SHOW ON SCROLL UP -----//
+
+function scrollHide () {
+    let prevScrollPos = window.pageYOffset;
+    window.onscroll = function(){
+        let currentScrollPos = window.pageYOffset;
+        if (currentScrollPos < 500){
+            return false;
+        }
+        if (prevScrollPos > currentScrollPos) {
+            document.querySelector("header").style.transform = "translateY(0)";
+          } else {
+            document.getElementById("header").style.transform = "translateY(-100%)";
+          }
+          prevScrollPos = currentScrollPos;
+        }
+    
+}
+
+scrollHide();
 
