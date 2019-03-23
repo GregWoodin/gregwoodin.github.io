@@ -9,6 +9,7 @@ header {
   width: 100%;
   transition: 0.5s ease-in-out;
   z-index: 12;
+  overflow: hidden;
 }
 
 .header-content {
@@ -155,7 +156,7 @@ main {
 .container {
   margin: 0 auto;
   max-width: 1280px;
-  width: 75%;
+  width: 80%;
   height: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -186,15 +187,44 @@ h2::after {
 h3 {
   font-size: 24px;
 }
+@media (max-width: 1300px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1039px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 859px) {
+  h3 {
+    font-size: 18px;
+  }
+}
 
 p {
   font-size: 18px;
   color: #4A5759;
 }
+@media (max-width: 1300px) {
+  p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1127px) {
+  p {
+    font-size: 16px;
+  }
+}
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+#about {
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 920px) {
@@ -205,6 +235,10 @@ a {
 @media only screen and (max-width: 601px) {
   .container {
     width: 95%;
+  }
+
+  #about {
+    margin-top: 0px;
   }
 }
 .about-container {
@@ -262,11 +296,6 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
-@media (max-width: 1000px) {
-  .about-text-container h3 {
-    font-size: 18px;
-  }
-}
 
 .education-container {
   grid-area: education;
@@ -290,7 +319,10 @@ a {
   font-size: 25px;
 }
 .education-component h3 {
-  font-size: 20px;
+  font-size: 18px;
+}
+.education-component p {
+  font-size: 16px;
 }
 
 .education-icon {
@@ -304,21 +336,38 @@ a {
   justify-content: center;
 }
 
-@media only screen and (max-width: 601px) {
+@media only screen and (max-width: 780px) {
   .about-container {
     grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  .about-container .profile-image {
-    width: 250px;
-    height: 250px;
+    grid-template-rows: auto;
+    grid-template-areas: "image" "text" "education" "buttons";
   }
 
   .education-container {
-    flex-direction: column;
-    height: 200px;
+    grid-template-columns: 1fr;
   }
 
+  .profile-image {
+    height: 300px;
+    margin: auto;
+    max-width: 300px;
+    width: 100%;
+    transform: scale(1);
+    position: static;
+  }
+
+  .about-text-container p {
+    margin-top: 10px;
+  }
+
+  .about-button-container .button {
+    margin-bottom: 10px;
+  }
+  .about-button-container .button:last-of-type {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 601px) {
   .about-text-container {
     height: 100%;
     z-index: 10;
@@ -417,17 +466,32 @@ a {
   transform-origin: top;
 }
 
-.twitter-container {
-  text-align: center;
+.twitter-publication-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
 }
 
 .twitter-timeline {
-  width: 50%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.SandboxRoot.env-bp-550 .timeline-Tweet-text {
+.timeline-Tweet-text {
   font-size: 18px !important;
   line-height: 10px !important;
+}
+
+.publication-container {
+  height: 600px;
+  background-color: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+}
+
+@media (max-width: 601px) {
+  .twitter-publication-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

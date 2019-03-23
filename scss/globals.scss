@@ -21,7 +21,7 @@ main{
 .container {
     margin: 0 auto;
     max-width: 1280px;
-    width: 75%;
+    width: 80%;
     height: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -54,11 +54,28 @@ h2{
 
 h3{
     font-size: 24px;
+    @media (max-width: 1300px){
+        font-size: 24px;
+    }
+    @media (max-width: 1039px){
+        font-size: 20px;
+    }
+    @media (max-width: 859px){
+        font-size: 18px;
+    }
+    
+
 }
 
 p{
     font-size: 18px;
     color: $paragraph-text;
+    @media (max-width: 1300px){
+        font-size: 17px;
+    }
+    @media (max-width: 1127px){
+        font-size: 16px;
+    }
 }
 
 
@@ -70,8 +87,7 @@ a{
 
 //----- SECTIONS -----//
 #about{
-    // background-color: rgba(167, 239, 214, 0.2);
-    // background-color: $pale-green;
+    margin-top: 40px;
 }
 
 #education{
@@ -85,10 +101,17 @@ a{
         width: 85%;
 }
 }
+@media only screen and (max-width: 780px){
+    #about{
+        margin-top: 0px;
+    }
+}
 @media only screen and (max-width: $large-phone-sizing) {
     .container{
         width: 95%;
     }
+
+    
 }
 
 
