@@ -16,6 +16,7 @@ body{
 
 main{
     transition: 0.5s ease-in-out;
+    background: linear-gradient(120deg, lighten($pale-green,20%), $teal);
 }
 
 .container {
@@ -63,6 +64,7 @@ h2{
 
 .bold{
     font-weight: 900;
+    font-family: "helvetica neue";
 }
 h3{
 
@@ -85,6 +87,7 @@ p{
     font-family: "helvetica neue";
     font-weight: 300;
     font-size: 21px;
+    letter-spacing: 1px;
 
     color: $paragraph-text;
     @media (max-width: 1300px){
@@ -109,10 +112,13 @@ a{
 //----- SECTIONS -----//
 #about{
     margin-top: 40px;
+    
 }
 
-#education{
-
+#awards{
+    //background: linear-gradient(45deg, $pale-green, $teal);
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 

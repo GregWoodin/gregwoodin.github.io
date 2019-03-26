@@ -151,6 +151,7 @@ body {
 
 main {
   transition: 0.5s ease-in-out;
+  background: linear-gradient(120deg, white, #98D9C2);
 }
 
 .container {
@@ -175,6 +176,7 @@ h2 {
 
 .bold {
   font-weight: 900;
+  font-family: "helvetica neue";
 }
 
 h3 {
@@ -200,6 +202,7 @@ p {
   font-family: "helvetica neue";
   font-weight: 300;
   font-size: 21px;
+  letter-spacing: 1px;
   color: #4A5759;
 }
 @media (max-width: 1300px) {
@@ -226,6 +229,11 @@ a {
 
 #about {
   margin-top: 40px;
+}
+
+#awards {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media only screen and (max-width: 920px) {
@@ -284,11 +292,13 @@ a {
   color: white;
   padding: 10px;
   text-align: center;
+  border: 2px solid white;
   transition: 0.3s ease-in-out;
 }
 .about-button-container .button:hover {
   background-color: white;
   color: #98D9C2;
+  border: 2px solid #98D9C2;
 }
 
 .about-text-container {
@@ -518,30 +528,36 @@ a {
 .publication-container {
   display: grid;
   grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, auto 0px);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   grid-gap: 10px;
-}
-.publication-container .image {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 150px;
+  transition: 0.5s ease-in-out;
 }
 .publication-container p {
   font-size: 18px;
   padding: 10px;
-  font-family: "futura";
 }
 
 .publication-item {
   display: grid;
-  grid-template-columns: 1fr 7fr 3fr;
+  grid-template-columns: 2fr 9fr 100px;
   align-items: center;
+  position: relative;
+  grid-template-areas: "icon text image";
+  transition: 0.5s ease-in-out;
 }
-
-.publication-icon {
+.publication-item .image {
+  grid-area: image;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100px;
+  height: 100%;
+}
+.publication-item .publication-icon {
+  grid-area: icon;
   align-self: center;
   justify-self: center;
   position: relative;
@@ -553,9 +569,34 @@ a {
   align-items: center;
   border-radius: 50%;
 }
-.publication-icon .fas, .publication-icon .far {
+.publication-item .publication-icon .fas, .publication-item .publication-icon .far {
   font-size: 18px;
   color: white;
+}
+.publication-item p {
+  grid-area: text;
+}
+.publication-item:hover {
+  background-color: #98D9C2;
+}
+
+.expanded-publication {
+  height: 0;
+  background-color: #CFE6E0;
+  width: 100%;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "helvetica neue";
+  font-weight: 200;
+  opacity: 0;
+}
+
+.expanded-active {
+  height: 100%;
+  padding: 30px;
+  opacity: 1;
 }
 
 #pub-img1 {

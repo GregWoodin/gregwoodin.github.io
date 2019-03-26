@@ -115,3 +115,22 @@ function scrollHide () {
 
 scrollHide();
 
+//----- OPEN EXPANDED INFO ABOUT PUBLICATIONS ----- //
+
+function expandPublications(){
+    const publicationItems = document.querySelectorAll('.publication-item');
+    const publicationExpanded = document.querySelectorAll('.expanded-publication');
+    for (let i = 0; i < publicationItems.length; i ++){
+        publicationItems[i].addEventListener("mouseenter", () =>{
+            publicationExpanded[i].classList.add('expanded-active');
+
+            publicationItems[i].addEventListener("mouseleave", () =>{
+                publicationExpanded[i].classList.remove('expanded-active');
+            })
+        })
+
+        
+    }
+}
+
+expandPublications();

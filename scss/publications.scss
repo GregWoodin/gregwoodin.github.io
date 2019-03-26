@@ -1,51 +1,97 @@
 .publication-container{
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto, auto 0px);
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
     background-color: rgba(white, 0.5);
     padding: 20px;
     grid-gap: 10px;
-    .image{
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 150px;
-    }
+    transition: 0.5s ease-in-out;
+    
 
     p{
         font-size: 18px;
         padding: 10px;
-        font-family: "futura";
+        
         
     }
 }
 
 .publication-item{
     display: grid;
-    grid-template-columns: 1fr 7fr 3fr;
+    grid-template-columns: 2fr 9fr 100px;
     align-items: center;
+    position: relative;
+    grid-template-areas:
+    "icon text image";
+    transition: 0.5s ease-in-out;
     //background-color: rgba(white, 0.8);
 
-}
-
-
-.publication-icon{
-    align-self: center;
-    justify-self: center;
-    position: relative;
-    height: 50px;
-    width: 50px;
-    background-color: $teal;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-
-    .fas, .far{
-        font-size: 18px;
-        color: white;
+    .image{
+        grid-area: image;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 100px;
+        height: 100%;
     }
+
+    .publication-icon{
+        grid-area: icon;
+        align-self: center;
+        justify-self: center;
+        position: relative;
+        height: 50px;
+        width: 50px;
+        background-color: $teal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    
+        .fas, .far{
+            font-size: 18px;
+            color: white;
+        }
+    }
+
+    p{
+        grid-area: text;
+    }
+
+    &:hover {
+        background-color: $teal;
+    }
+
 }
+
+
+.expanded-publication{
+    height: 0;
+    background-color: $pale-green;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: "helvetica neue";
+    font-weight: 200;
+    opacity: 0;
+    
+    
+
+}
+
+.expanded-active{
+    height: 100%;
+    padding: 30px;
+    opacity: 1;
+
+    
+}
+
+
+
 
 
 #pub-img1{

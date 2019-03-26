@@ -43,11 +43,13 @@
         color: white;
         padding: 10px;
         text-align: center;
-
+        border: 2px solid white;
         transition: 0.3s ease-in-out;
         &:hover{
             background-color: white;
             color: $teal;
+            border: 2px solid $teal;
+            //transform: scale(1.05);
         }
     }
 }
