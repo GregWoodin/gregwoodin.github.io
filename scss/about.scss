@@ -117,6 +117,10 @@
 
     .education-container{
         grid-template-columns: 1fr;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 0 !important;
+        padding: 30px;
     }
 
     .profile-image{
@@ -145,14 +149,40 @@
     }
 
     
+
+    
 }
 
 @media only screen and (max-width: $large-phone-sizing){
-
-    
-
     .about-text-container{
         height: 100%;
         z-index: 10;
+    }
+
+    .about-container{
+        padding: 20px;
+    }
+
+    .education-container{
+        padding: 20px;
+    }
+
+    
+}
+
+@media only screen and (max-width: $small-phone-sizing){
+    .education-component{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-gap: 5px;
+
+        .education-text{
+            text-align: center;
+        }
+    }
+
+    .education-icon{
+        height: 50px;
+        width: 50px;
     }
 }

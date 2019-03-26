@@ -1,18 +1,20 @@
 
 // ----- AWARDS YEAR SORTING ----- //
+function awardsScroller(){
+    let awardsYear = document.querySelectorAll('.awards-year');
+    let awardsContent = document.querySelector('.awards-content-inner-container');
+    let lastYear = 0;
+    for(let i = 0; i < awardsYear.length; i++){
+        awardsYear[i].addEventListener("click", () =>{
+            awardsYear[lastYear].classList.remove('active-year');
+            awardsYear[i].classList.add('active-year');
+            lastYear = i;
 
-let awardsYear = document.querySelectorAll('.awards-year');
-let awardsContent = document.querySelector('.awards-content-inner-container');
-let lastYear = 0;
-for(let i = 0; i < awardsYear.length; i++){
-    awardsYear[i].addEventListener("click", () =>{
-        awardsYear[lastYear].classList.remove('active-year');
-        awardsYear[i].classList.add('active-year');
-        lastYear = i;
-
-        awardsContent.style.transform = "translateY(" + -i*400 + "px)";
-    });
+            awardsContent.style.transform = "translateY(" + -i*400 + "px)";
+        });
+    }
 }
+awardsScroller();
 
 // ----- HAMBURGER MENU ----- //
 
@@ -24,14 +26,20 @@ function mobileMenuToggle(){
 				hamburgerMenu.classList.remove('is-active');
                 mobileMenu.style.width = 0;
                 hamburgerMenu.style.left = "0";
+                hamburgerMenu.style.backgroundColor = "#CFE6E0"
 
 			} else {
                 hamburgerMenu.classList.add('is-active');
+                hamburgerMenu.style.backgroundColor = "transparent"
+                mobileMenu.style.width = '200px';
                 
+                //- Moves icon on wide screens
                 if (document.querySelector('body').clientWidth > 601){
                     hamburgerMenu.style.left = "30px";
                 }
-                mobileMenu.style.width = '200px';
+                
+
+                //- Closes menu if an navigation item is clicked
                 let sidemenuItems = document.querySelectorAll('nav ul li');
                 sidemenuItems.forEach(item => item.addEventListener("click", () =>{
                     hamburgerMenu.classList.remove('is-active');

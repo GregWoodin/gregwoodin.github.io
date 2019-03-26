@@ -9,7 +9,6 @@ header {
   width: 100%;
   transition: 0.5s ease-in-out;
   z-index: 12;
-  overflow: hidden;
 }
 
 .header-content {
@@ -65,7 +64,7 @@ nav li {
 }
 nav li:hover {
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #98D9C2;
 }
 nav a {
   color: inherit;
@@ -78,6 +77,7 @@ nav a {
   position: relative;
   padding: 5px;
   transition: 0.5s ease;
+  background-color: #CFE6E0;
 }
 
 @media only screen and (max-width: 920px) {
@@ -146,7 +146,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, #CFE6E0, #fff);
+  background: linear-gradient(to bottom, #CFE6E0, rgba(207, 230, 224, 0.7));
 }
 
 main {
@@ -164,28 +164,21 @@ main {
 }
 
 h2 {
+  width: 50%;
+  margin: auto;
+  padding: 10px;
   background-color: white;
-  color: black;
-  position: relative;
-  display: inline;
-  padding: 10px 30px 10px 10px;
-  z-index: 1;
+  margin-bottom: 20px;
+  text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
-h2::after {
-  content: "";
-  position: absolute;
-  right: 100%;
-  top: 0;
-  bottom: 0;
-  background-color: white;
-  width: 500px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
-  z-index: -1;
+
+.bold {
+  font-weight: 900;
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 25px;
 }
 @media (max-width: 1300px) {
   h3 {
@@ -204,17 +197,25 @@ h3 {
 }
 
 p {
-  font-size: 18px;
+  font-family: "helvetica neue";
+  font-weight: 300;
+  font-size: 21px;
   color: #4A5759;
 }
 @media (max-width: 1300px) {
   p {
-    font-size: 17px;
+    font-size: 19px;
   }
 }
 @media (max-width: 1127px) {
   p {
-    font-size: 16px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 920px) {
+  p {
+    font-size: 18px;
+    font-weight: 300;
   }
 }
 
@@ -232,13 +233,14 @@ a {
     width: 85%;
   }
 }
+@media only screen and (max-width: 780px) {
+  #about {
+    margin-top: 0px;
+  }
+}
 @media only screen and (max-width: 601px) {
   .container {
     width: 95%;
-  }
-
-  #about {
-    margin-top: 0px;
   }
 }
 .about-container {
@@ -345,6 +347,10 @@ a {
 
   .education-container {
     grid-template-columns: 1fr;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    padding: 30px;
   }
 
   .profile-image {
@@ -372,6 +378,29 @@ a {
     height: 100%;
     z-index: 10;
   }
+
+  .about-container {
+    padding: 20px;
+  }
+
+  .education-container {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .education-component {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 5px;
+  }
+  .education-component .education-text {
+    text-align: center;
+  }
+
+  .education-icon {
+    height: 50px;
+    width: 50px;
+  }
 }
 #awards {
   opacity: 0;
@@ -380,7 +409,7 @@ a {
 
 .timeline-container {
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.63);
+  background-color: rgba(255, 255, 255, 0.8);
   display: grid;
   grid-template-columns: 1fr 2fr;
   justify-items: center;
@@ -481,17 +510,64 @@ a {
   line-height: 10px !important;
 }
 
-.publication-container {
-  height: 600px;
-  background-color: white;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-  padding: 10px;
-}
-
 @media (max-width: 601px) {
   .twitter-publication-container {
     grid-template-columns: 1fr;
   }
+}
+.publication-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  grid-gap: 10px;
+}
+.publication-container .image {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+}
+.publication-container p {
+  font-size: 18px;
+  padding: 10px;
+  font-family: "futura";
+}
+
+.publication-item {
+  display: grid;
+  grid-template-columns: 1fr 7fr 3fr;
+  align-items: center;
+}
+
+.publication-icon {
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: #98D9C2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.publication-icon .fas, .publication-icon .far {
+  font-size: 18px;
+  color: white;
+}
+
+#pub-img1 {
+  background-image: url(../img/news_archive_article.png);
+}
+
+#pub-img2 {
+  background-image: url(../img/abstract_concepts_paper.jpg);
+}
+
+#pub-img3 {
+  background-image: url(../img/aquavira.jpg);
 }
 
 /*# sourceMappingURL=style.css.map */

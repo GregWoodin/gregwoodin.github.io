@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background: linear-gradient(to bottom, #CFE6E0, #fff);
+    background: linear-gradient(to bottom, $pale-green, rgba($pale-green, 0.7));
 }
 
 main{
@@ -30,30 +30,44 @@ main{
 
 h2{
     
+    // background-color: white;
+    // color: black;
+    // position: relative;
+    // display: inline;
+    // padding: 10px 30px 10px 10px;
+    // display: inline-block;
+    // margin: auto;
+    // z-index: 1;
+    // text-align: center;
+    // box-shadow: 2px 2px 5px rgba(0,0,0, 0.4);
+
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     right: 100%;
+    //     top: 0;
+    //     bottom: 0;
+    //     background-color: white;
+    //     width: 500px;
+    //     box-shadow: 2px 2px 5px rgba(0,0,0, 0.4);
+    //     z-index: -1;
+    // }
+    width: 50%;
+    margin: auto;
+    padding: 10px;
     background-color: white;
-    color: black;
-    position: relative;
-    display: inline;
-    padding: 10px 30px 10px 10px;
-
-    z-index: 1;
+    margin-bottom: 20px;
+    text-align: center;
     box-shadow: 2px 2px 5px rgba(0,0,0, 0.4);
-
-    &::after{
-        content: "";
-        position: absolute;
-        right: 100%;
-        top: 0;
-        bottom: 0;
-        background-color: white;
-        width: 500px;
-        box-shadow: 2px 2px 5px rgba(0,0,0, 0.4);
-        z-index: -1;
-    }
 }
 
+.bold{
+    font-weight: 900;
+}
 h3{
-    font-size: 24px;
+
+    font-size: 25px;
+
     @media (max-width: 1300px){
         font-size: 24px;
     }
@@ -68,13 +82,20 @@ h3{
 }
 
 p{
-    font-size: 18px;
+    font-family: "helvetica neue";
+    font-weight: 300;
+    font-size: 21px;
+
     color: $paragraph-text;
     @media (max-width: 1300px){
-        font-size: 17px;
+        font-size: 19px;
     }
     @media (max-width: 1127px){
-        font-size: 16px;
+        font-size: 18px;
+    }
+    @media (max-width: $tablet-sizing){
+        font-size: 18px;
+        font-weight: 300;
     }
 }
 
