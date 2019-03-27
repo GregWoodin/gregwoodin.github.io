@@ -45,14 +45,32 @@
         text-align: center;
         border: 2px solid white;
         transition: 0.3s ease-in-out;
+        position: relative;
         &:hover{
             background-color: white;
             color: $teal;
             border: 2px solid $teal;
             //transform: scale(1.05);
         }
+
+        .contact-expanded{
+            position: absolute;
+            background-color: $teal;
+            height: 100%;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            opacity: 0;
+            transition: 1s ease-in-out;
+            &:hover{
+                left: 110%;
+                opacity: 1;
+            }
+
+        }
     }
 }
+
 
 .about-text-container{
     grid-area: text;

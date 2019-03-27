@@ -28,6 +28,10 @@ header {
   flex-direction: row;
 }
 
+.hide-header {
+  transform: translateY(-100%);
+}
+
 .h1-shrink {
   font-size: 30px;
 }
@@ -162,6 +166,7 @@ main {
   padding-top: 20px;
   padding-bottom: 20px;
   transition: 0.5s ease-in-out;
+  overflow: visible;
 }
 
 h2 {
@@ -294,11 +299,26 @@ a {
   text-align: center;
   border: 2px solid white;
   transition: 0.3s ease-in-out;
+  position: relative;
 }
 .about-button-container .button:hover {
   background-color: white;
   color: #98D9C2;
   border: 2px solid #98D9C2;
+}
+.about-button-container .button .contact-expanded {
+  position: absolute;
+  background-color: #98D9C2;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  transition: 1s ease-in-out;
+}
+.about-button-container .button .contact-expanded:hover {
+  left: 110%;
+  opacity: 1;
 }
 
 .about-text-container {
@@ -609,6 +629,56 @@ a {
 
 #pub-img3 {
   background-image: url(../img/aquavira.jpg);
+}
+
+.conferences-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+.conferences-container img {
+  width: 40%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+}
+.conferences-container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.conferences-container li {
+  display: grid;
+  align-items: center;
+  justify-items: left;
+  grid-template-columns: 100px auto;
+  grid-template-areas: "icon header" "icon text";
+  margin-bottom: 20px;
+}
+.conferences-container li:last-of-type {
+  margin-bottom: 0px;
+}
+.conferences-container h4 {
+  grid-area: header;
+  font-size: 18px;
+}
+.conferences-container p {
+  grid-area: text;
+}
+
+.conference-image {
+  grid-area: icon;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #98D9C2;
+}
+.conference-image .fas, .conference-image .far {
+  color: white;
+  font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

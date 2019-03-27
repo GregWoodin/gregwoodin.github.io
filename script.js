@@ -43,7 +43,7 @@ function mobileMenuToggle(){
                 let sidemenuItems = document.querySelectorAll('nav ul li');
                 sidemenuItems.forEach(item => item.addEventListener("click", () =>{
                     hamburgerMenu.classList.remove('is-active');
-				    mobileMenu.style.width = 0;
+                    mobileMenu.style.width = 0;
                 }));
 			}
 		});
@@ -104,9 +104,9 @@ function scrollHide () {
             return false;
         }
         if (prevScrollPos > currentScrollPos) {
-            document.querySelector("header").style.transform = "translateY(0)";
+            document.querySelector("header").classList.remove('hide-header');
           } else {
-            document.getElementById("header").style.transform = "translateY(-100%)";
+            document.getElementById("header").classList.add('hide-header');
           }
           prevScrollPos = currentScrollPos;
         }
@@ -134,3 +134,8 @@ function expandPublications(){
 }
 
 expandPublications();
+
+//----- EXPAND CONTACT ME -----//
+document.querySelector('#contact-btn').addEventListener("click", () => {
+
+});
