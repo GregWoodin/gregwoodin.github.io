@@ -73,13 +73,16 @@ h2{
     //     box-shadow: 2px 2px 5px rgba(0,0,0, 0.4);
     //     z-index: -1;
     // }
-    width: 50%;
     margin: auto;
-    padding: 10px;
-    background-color: white;
-    margin-bottom: 20px;
+    padding: 10px 30px 10px 30px;
+    background-color: rgba(255,255,255,0.8);
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0,0,0, 0.4);
+    position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    z-index: 20;
 }
 
 .bold{
@@ -136,12 +139,6 @@ a{
 #about{
     margin-top: 40px;
     
-}
-
-#awards{
-    //background: linear-gradient(45deg, $pale-green, $teal);
-    padding-top: 30px;
-    padding-bottom: 30px;
 }
 
 

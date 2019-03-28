@@ -11,8 +11,17 @@
     grid-template-columns: 150px auto;
     justify-items: center;
     height: 600px;
-    overflow: hidden;
+    //overflow: hidden;
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    position: relative;
+
+    h2{
+        
+    }
+
+    @media (max-width: $tablet-sizing){
+        height: 400px;
+    }
 }
 
 .awards-content{
@@ -32,13 +41,20 @@
 
     overflow-y: scroll;
     h4{
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        font-size: 19px;
+        @media (max-width: 1200px){
             font-size: 17px;
+        }
     }
     p{
-        margin-bottom: 30px;
+        margin-bottom: 35px;
         color: $paragraph-text;
-        font-size: 17px;
+        font-size: 19px;
+        
+        @media (max-width: 1200px){
+            font-size: 17px;
+        }
     }
 }
 

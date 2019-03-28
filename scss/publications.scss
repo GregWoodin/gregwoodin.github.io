@@ -7,11 +7,11 @@
     padding: 20px;
     grid-gap: 10px;
     transition: 0.5s ease-in-out;
+    position: relative;
     
 
     p{
         font-size: 18px;
-        padding: 10px;
         
         
     }
@@ -19,12 +19,17 @@
 
 .publication-item{
     display: grid;
-    grid-template-columns: 2fr 9fr 100px;
+    grid-template-columns: auto 9fr 100px;
     align-items: center;
     position: relative;
     grid-template-areas:
     "icon text image";
     transition: 0.5s ease-in-out;
+
+    @media (max-width: $large-phone-sizing){
+        grid-template-columns: 70px 9fr;
+    }
+    
     //background-color: rgba(white, 0.8);
 
     .image{
@@ -34,6 +39,9 @@
         background-repeat: no-repeat;
         min-height: 100px;
         height: 100%;
+        @media (max-width: $large-phone-sizing){
+            display: none;
+        }
     }
 
     .publication-icon{
@@ -48,6 +56,7 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
+        margin-right: 20px;
     
         .fas, .far{
             font-size: 18px;

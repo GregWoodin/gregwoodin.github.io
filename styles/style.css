@@ -184,13 +184,16 @@ main {
 }
 
 h2 {
-  width: 50%;
   margin: auto;
-  padding: 10px;
-  background-color: white;
-  margin-bottom: 20px;
+  padding: 10px 30px 10px 30px;
+  background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
 }
 
 .bold {
@@ -253,11 +256,6 @@ a {
   margin-top: 40px;
 }
 
-#awards {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
 @media only screen and (max-width: 920px) {
   .container {
     width: 85%;
@@ -312,40 +310,16 @@ a {
   display: block;
   background-color: #98D9C2;
   color: white;
+  border: 2px solid transparent;
   padding: 10px;
   text-align: center;
-  border: 2px solid transparent;
-  transition: 0.3s ease-in-out;
   position: relative;
-  z-index: 7;
+  transition: 0.3s ease-in-out;
 }
 .about-button-container .button:hover {
   background-color: white;
   color: #98D9C2;
   border: 2px solid #98D9C2;
-}
-.about-button-container .button .contact-expanded {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: 2px solid #98D9C2;
-  color: #98D9C2;
-  height: 100%;
-  left: 0%;
-  bottom: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-  opacity: 0;
-  display: none;
-  transition: 1s ease-in-out;
-}
-
-.contact-expanded-active {
-  display: flex !important;
-  left: 110% !important;
-  opacity: 1 !important;
 }
 
 .about-text-container {
@@ -377,7 +351,7 @@ a {
 .education-component .fas {
   font-size: 25px;
 }
-.education-component h3 {
+.education-component h4 {
   font-size: 18px;
 }
 .education-icon {
@@ -468,8 +442,13 @@ a {
   grid-template-columns: 150px auto;
   justify-items: center;
   height: 600px;
-  overflow: hidden;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+@media (max-width: 920px) {
+  .timeline-container {
+    height: 400px;
+  }
 }
 
 .awards-content {
@@ -487,13 +466,23 @@ a {
   overflow-y: scroll;
 }
 .awards-content-inner h4 {
-  margin-bottom: 5px;
-  font-size: 17px;
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+@media (max-width: 1200px) {
+  .awards-content-inner h4 {
+    font-size: 17px;
+  }
 }
 .awards-content-inner p {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   color: #4A5759;
-  font-size: 17px;
+  font-size: 19px;
+}
+@media (max-width: 1200px) {
+  .awards-content-inner p {
+    font-size: 17px;
+  }
 }
 
 .awards-years {
@@ -583,19 +572,24 @@ a {
   padding: 20px;
   grid-gap: 10px;
   transition: 0.5s ease-in-out;
+  position: relative;
 }
 .publication-container p {
   font-size: 18px;
-  padding: 10px;
 }
 
 .publication-item {
   display: grid;
-  grid-template-columns: 2fr 9fr 100px;
+  grid-template-columns: auto 9fr 100px;
   align-items: center;
   position: relative;
   grid-template-areas: "icon text image";
   transition: 0.5s ease-in-out;
+}
+@media (max-width: 601px) {
+  .publication-item {
+    grid-template-columns: 70px 9fr;
+  }
 }
 .publication-item .image {
   grid-area: image;
@@ -604,6 +598,11 @@ a {
   background-repeat: no-repeat;
   min-height: 100px;
   height: 100%;
+}
+@media (max-width: 601px) {
+  .publication-item .image {
+    display: none;
+  }
 }
 .publication-item .publication-icon {
   grid-area: icon;
@@ -617,6 +616,7 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  margin-right: 20px;
 }
 .publication-item .publication-icon .fas, .publication-item .publication-icon .far {
   font-size: 18px;
@@ -671,6 +671,7 @@ a {
 .conferences-container {
   background-color: rgba(255, 255, 255, 0.8);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
   padding: 20px;
 }
 .conferences-container img {
@@ -696,6 +697,18 @@ a {
 .conferences-container li:last-of-type {
   margin-bottom: 0px;
 }
+@media (max-width: 601px) {
+  .conferences-container li {
+    grid-template-columns: 70px auto;
+  }
+}
+@media (max-width: 460px) {
+  .conferences-container li {
+    grid-template-columns: 1fr;
+    grid-template-areas: "icon" "header" "text";
+    text-align: center;
+  }
+}
 .conferences-container h4 {
   grid-area: header;
   font-size: 18px;
@@ -716,6 +729,16 @@ a {
   border-radius: 50%;
   background-color: #98D9C2;
 }
+@media (max-width: 601px) {
+  .conference-image {
+    justify-self: flex-start;
+  }
+}
+@media (max-width: 601px) {
+  .conference-image {
+    justify-self: center;
+  }
+}
 .conference-image .fas, .conference-image .far {
   color: white;
   font-size: 20px;
@@ -725,8 +748,11 @@ a {
   font-size: 20px;
 }
 
-.links-section {
-  background-color: #e3f4ee;
+#links-section {
+  background-color: #98D9C2;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
 }
 
 .links-container {
@@ -751,19 +777,18 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
   max-width: 400px;
 }
 .links i {
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.2s ease-in-out;
   font-size: 40px;
   color: #383537;
   display: block;
 }
 .links i:hover {
-  color: #98D9C2;
+  color: white;
 }
 .links img {
   cursor: pointer;
@@ -780,16 +805,17 @@ footer {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
 }
-.footer-container .designed-by {
+.footer-container .right {
   text-align: right;
 }
-.footer-container .designed-by a {
+.footer-container a {
   text-decoration: underline;
   color: white;
   transition: 0.5s;
 }
-.footer-container .designed-by a:hover {
+.footer-container a:hover {
   color: black;
 }
 
