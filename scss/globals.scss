@@ -12,11 +12,30 @@ html{
 
 body{
     background: linear-gradient(to bottom, $pale-green, rgba($pale-green, 0.7));
+    animation-name: page-fade-in;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0.6s;
+    opacity: 0;
+    width: 100%;
+
+
+}
+
+@keyframes page-fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+
+    }
 }
 
 main{
     transition: 0.5s ease-in-out;
-    background: linear-gradient(120deg, lighten($pale-green,20%), $teal);
+  //background: linear-gradient(120deg, lighten($pale-green,20%), $teal);
 }
 
 .container {
@@ -84,11 +103,14 @@ h3{
 
 }
 
+h4{
+    font-size: 21px;
+}
+
 p{
     font-family: "helvetica neue";
     font-weight: 300;
     font-size: 21px;
-    letter-spacing: 1px;
 
     color: $paragraph-text;
     @media (max-width: 1300px){

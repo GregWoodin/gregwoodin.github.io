@@ -10,7 +10,7 @@ function awardsScroller(){
             awardsYear[i].classList.add('active-year');
             lastYear = i;
 
-            awardsContent.style.transform = "translateY(" + -i*400 + "px)";
+            awardsContent.style.transform = "translateY(" + -i*600 + "px)";
         });
     }
 }
@@ -136,6 +136,9 @@ function expandPublications(){
 expandPublications();
 
 //----- EXPAND CONTACT ME -----//
-document.querySelector('#contact-btn').addEventListener("click", () => {
-
+document.querySelector('#contact-btn').addEventListener("click", (e) => {
+    let contactExpanded = document.querySelector('.contact-expanded');
+    console.log(contactExpanded);
+    contactExpanded.classList.toggle('contact-expanded-active');
+    console.log(contactExpanded.classList);
 });

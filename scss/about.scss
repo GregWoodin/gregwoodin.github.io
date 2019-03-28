@@ -43,9 +43,10 @@
         color: white;
         padding: 10px;
         text-align: center;
-        border: 2px solid white;
+        border: 2px solid transparent;
         transition: 0.3s ease-in-out;
         position: relative;
+        z-index: 7;
         &:hover{
             background-color: white;
             color: $teal;
@@ -55,20 +56,29 @@
 
         .contact-expanded{
             position: absolute;
-            background-color: $teal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border: 2px solid $teal;
+            color: $teal;
             height: 100%;
-            left: 0;
+            left: 0%;
             bottom: 0;
-            width: 100%;
+            padding-left: 30px;
+            padding-right: 30px;
             opacity: 0;
+            display: none;
+            
             transition: 1s ease-in-out;
-            &:hover{
-                left: 110%;
-                opacity: 1;
-            }
-
         }
     }
+}
+
+.contact-expanded-active{
+    display: flex !important;
+    left: 110% !important;
+    opacity: 1 !important;
 }
 
 
@@ -108,7 +118,7 @@
         font-size: 18px;
     }
     p{
-        font-size: 16px;
+        
     }
 }
 

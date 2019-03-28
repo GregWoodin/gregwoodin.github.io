@@ -3,7 +3,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto, auto 0px);
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
-    background-color: rgba(white, 0.5);
+    background-color: rgba(255,255,255,0.8);
     padding: 20px;
     grid-gap: 10px;
     transition: 0.5s ease-in-out;
@@ -55,6 +55,16 @@
         }
     }
 
+    &>.fas{
+        font-size: 15px;
+        color: $teal;
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
     p{
         grid-area: text;
     }
@@ -64,6 +74,9 @@
     }
 
 }
+
+
+
 
 
 .expanded-publication{
