@@ -500,6 +500,7 @@ a {
   padding: 40px 0;
   display: flex;
   width: 100%;
+  background-color: #eaf7f3;
 }
 .awards-years ul {
   list-style: none;
