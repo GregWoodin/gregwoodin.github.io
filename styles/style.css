@@ -8,7 +8,7 @@ header {
   position: fixed;
   width: 100%;
   transition: 0.5s ease-in-out;
-  z-index: 12;
+  z-index: 20;
 }
 
 .header-content {
@@ -113,6 +113,7 @@ nav a {
   nav ul li {
     padding-top: 10px;
     padding-bottom: 10px;
+    font-size: 18px;
   }
 
   .header-content {
@@ -186,14 +187,14 @@ main {
 h2 {
   margin: auto;
   padding: 10px 30px 10px 30px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #d0eee3;
   text-align: center;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
   position: absolute;
   top: 0;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 20;
+  z-index: 17;
 }
 
 .bold {
@@ -546,11 +547,12 @@ a {
 .twitter-publication-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
+  grid-gap: 40px;
 }
 
-.twitter-timeline {
+.twitter-timeline-container {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
 }
 
 .timeline-Tweet-text {
@@ -569,8 +571,7 @@ a {
   grid-template-rows: repeat(auto, auto 0px);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  grid-gap: 10px;
+  padding: 40px 20px;
   transition: 0.5s ease-in-out;
   position: relative;
 }
@@ -580,15 +581,18 @@ a {
 
 .publication-item {
   display: grid;
-  grid-template-columns: auto 9fr 100px;
+  grid-template-columns: 100px auto 100px;
   align-items: center;
   position: relative;
   grid-template-areas: "icon text image";
   transition: 0.5s ease-in-out;
+  padding: 20px;
 }
 @media (max-width: 601px) {
   .publication-item {
-    grid-template-columns: 70px 9fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "icon" "text";
+    text-align: center;
   }
 }
 .publication-item .image {
@@ -616,11 +620,15 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-right: 20px;
 }
 .publication-item .publication-icon .fas, .publication-item .publication-icon .far {
   font-size: 18px;
   color: white;
+}
+@media (max-width: 601px) {
+  .publication-item .publication-icon {
+    margin-bottom: 10px;
+  }
 }
 .publication-item > .fas {
   font-size: 15px;
@@ -632,6 +640,12 @@ a {
 }
 .publication-item p {
   grid-area: text;
+  padding-right: 20px;
+}
+@media (max-width: 460px) {
+  .publication-item p {
+    padding-right: 0;
+  }
 }
 .publication-item:hover {
   background-color: #98D9C2;
@@ -639,7 +653,7 @@ a {
 
 .expanded-publication {
   height: 0;
-  background-color: #CFE6E0;
+  background-color: #f1f7f6;
   width: 100%;
   transition: 0.5s ease-in-out;
   overflow: hidden;
@@ -648,6 +662,9 @@ a {
   font-family: "helvetica neue";
   font-weight: 200;
   opacity: 0;
+  line-height: 25px;
+  font-size: 18px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 .expanded-active {
@@ -713,6 +730,11 @@ a {
   grid-area: header;
   font-size: 18px;
 }
+@media (max-width: 460px) {
+  .conferences-container h4 {
+    margin-bottom: 5px;
+  }
+}
 .conferences-container p {
   grid-area: text;
 }
@@ -728,15 +750,17 @@ a {
   width: 50px;
   border-radius: 50%;
   background-color: #98D9C2;
+  user-select: none;
 }
 @media (max-width: 601px) {
   .conference-image {
     justify-self: flex-start;
   }
 }
-@media (max-width: 601px) {
+@media (max-width: 460px) {
   .conference-image {
     justify-self: center;
+    margin-bottom: 10px;
   }
 }
 .conference-image .fas, .conference-image .far {
@@ -760,7 +784,7 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 150px;
+  height: 170px;
 }
 .links-container > .email {
   margin-bottom: 20px;
@@ -777,7 +801,7 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   max-width: 400px;
 }
 .links i {
@@ -793,11 +817,14 @@ a {
 .links img {
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  height: 40px;
+  height: 43px;
 }
 
 footer {
   background-color: #4dbe96;
+  background-color: #4A5759;
+  color: white;
+  font-weight: 200;
 }
 
 .footer-container {
@@ -806,6 +833,13 @@ footer {
   justify-content: space-between;
   align-items: center;
   font-size: 14px;
+}
+@media (max-width: 601px) {
+  .footer-container {
+    flex-direction: column;
+    height: 100px;
+    text-align: center;
+  }
 }
 .footer-container .right {
   text-align: right;

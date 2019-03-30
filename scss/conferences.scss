@@ -46,6 +46,9 @@
     h4{
         grid-area: header;
         font-size: 18px;
+        @media (max-width: $small-phone-sizing){
+            margin-bottom: 5px;
+        }
     }
 
     p{
@@ -64,11 +67,13 @@
     width: 50px;
     border-radius: 50%;
     background-color: $teal;
+    user-select: none;
     @media (max-width: $large-phone-sizing){
         justify-self: flex-start;
     }
-    @media (max-width: $large-phone-sizing){
+    @media (max-width: $small-phone-sizing){
         justify-self: center;
+        margin-bottom: 10px;
     }
 
     .fas, .far {
@@ -79,5 +84,7 @@
     .material-icons{
         color: white;
         font-size: 20px;
+
     }
 }
+

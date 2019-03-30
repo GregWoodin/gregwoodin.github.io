@@ -142,3 +142,4 @@ document.querySelector('#contact-btn').addEventListener("click", (e) => {
     contactExpanded.classList.toggle('contact-expanded-active');
     console.log(contactExpanded.classList);
 });
+

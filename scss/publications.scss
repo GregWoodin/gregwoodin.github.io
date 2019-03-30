@@ -4,8 +4,7 @@
     grid-template-rows: repeat(auto, auto 0px);
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
     background-color: rgba(255,255,255,0.8);
-    padding: 20px;
-    grid-gap: 10px;
+    padding: 40px 20px;
     transition: 0.5s ease-in-out;
     position: relative;
     
@@ -19,15 +18,21 @@
 
 .publication-item{
     display: grid;
-    grid-template-columns: auto 9fr 100px;
+    grid-template-columns: 100px auto 100px;
     align-items: center;
     position: relative;
     grid-template-areas:
     "icon text image";
     transition: 0.5s ease-in-out;
+    padding: 20px;
 
     @media (max-width: $large-phone-sizing){
-        grid-template-columns: 70px 9fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "icon"
+        "text"
+        ;
+        text-align: center;
     }
     
     //background-color: rgba(white, 0.8);
@@ -54,13 +59,18 @@
         background-color: $teal;
         display: flex;
         justify-content: center;
+        
         align-items: center;
         border-radius: 50%;
-        margin-right: 20px;
     
         .fas, .far{
             font-size: 18px;
             color: white;
+        }
+
+        @media (max-width: $large-phone-sizing){
+            margin-bottom: 10px;
+
         }
     }
 
@@ -76,6 +86,10 @@
 
     p{
         grid-area: text;
+        padding-right: 20px;
+        @media (max-width: $small-phone-sizing){
+            padding-right: 0;
+        }
     }
 
     &:hover {
@@ -90,7 +104,7 @@
 
 .expanded-publication{
     height: 0;
-    background-color: $pale-green;
+    background-color: lighten($pale-green, 10%);
     width: 100%;
     transition: 0.5s ease-in-out;
     overflow: hidden;
@@ -99,6 +113,9 @@
     font-family: "helvetica neue";
     font-weight: 200;
     opacity: 0;
+    line-height: 25px;
+    font-size: 18px;
+    box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
     
     
 
