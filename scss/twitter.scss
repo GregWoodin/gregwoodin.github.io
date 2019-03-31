@@ -2,6 +2,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
+    @media (max-width: $tablet-sizing){
+        grid-gap: 70px;
+    }
 }
 .twitter-timeline-container{
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);

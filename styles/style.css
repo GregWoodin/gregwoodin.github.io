@@ -257,18 +257,25 @@ a {
   color: inherit;
 }
 
+section {
+  margin-bottom: 30px;
+}
+section:last-of-type {
+  margin-bottom: 0px;
+}
+
 #about {
   margin-top: 40px;
 }
 
 .visible {
   opacity: 1 !important;
-  transition: 3s ease-in-out;
+  transition: 2.5s ease-in-out;
 }
 
 .invisible {
   opacity: 0;
-  transition: 3s ease-in-out;
+  transition: 2.5s ease-in-out;
 }
 
 @media only screen and (max-width: 920px) {
@@ -570,6 +577,11 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 40px;
+}
+@media (max-width: 920px) {
+  .twitter-publication-container {
+    grid-gap: 70px;
+  }
 }
 
 .twitter-timeline-container {

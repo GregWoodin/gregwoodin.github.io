@@ -141,19 +141,26 @@ a{
 
 
 //----- SECTIONS -----//
+
+section{
+    margin-bottom: 30px;
+    &:last-of-type{
+        margin-bottom: 0px;
+    }
+}
 #about{
     margin-top: 40px;
-
 }
+
 
 .visible{
     opacity: 1 !important;
-    transition: 3s ease-in-out;
+    transition: 2.5s ease-in-out;
 }
 
 .invisible{
     opacity: 0;
-    transition: 3s ease-in-out;
+    transition: 2.5s ease-in-out;
 }
 
 
