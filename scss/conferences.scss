@@ -17,6 +17,13 @@
         flex-direction: column;
     }
 
+    p{
+        font-size: 19px;
+        @media (max-width: $tablet-sizing){
+            font-size: 17px;
+        }
+    }
+
     li{
         display: grid;
         align-items: center;
@@ -26,6 +33,7 @@
             "icon header"
             "icon text";
         margin-bottom: 30px;
+        padding-right: 20px;
         &:last-of-type{
             margin-bottom: 0px;
         }
@@ -40,14 +48,19 @@
             "header"
             "text";
             text-align: center;
+            padding-right: 0;
         }
     }
 
     h4{
         grid-area: header;
-        font-size: 18px;
+        font-size: 19px;
         @media (max-width: $small-phone-sizing){
             margin-bottom: 5px;
+        }
+
+        @media (max-width: $tablet-sizing){
+            font-size: 17px;
         }
     }
 

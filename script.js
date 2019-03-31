@@ -9,8 +9,10 @@ function awardsScroller(){
             awardsYear[lastYear].classList.remove('active-year');
             awardsYear[i].classList.add('active-year');
             lastYear = i;
+            let scrollHeight = document.querySelector('.awards-content-inner').clientHeight;
+            console.log(scrollHeight);
 
-            awardsContent.style.transform = "translateY(" + -i*600 + "px)";
+            awardsContent.style.transform = "translateY(" + -i*scrollHeight + "px)";
         });
     }
 }
@@ -53,9 +55,13 @@ mobileMenuToggle();
 // ----- DYNAMIC MAIN START POINT ----- //
 function setWelcomeSectionHeight(){
 	let headerHeight = document.querySelector('header').clientHeight;
-	document.querySelector('main').style.paddingTop = headerHeight + "px";
+    document.querySelector('main').style.paddingTop = headerHeight + "px";
 }
 setWelcomeSectionHeight();
+
+window.addEventListener("resize", () =>{
+    setWelcomeSectionHeight();
+});
 
 function fixNavBug () {
     window.addEventListener('resize', () =>{
@@ -69,30 +75,55 @@ function fixNavBug () {
 }
 
 fixNavBug();
+// --- SET SECTIONS TO OPACITY: 0 --- //
+function invisibleSections(){
+    const invisSections = document.querySelectorAll('main>section:not(:first-child');
+    invisSections.forEach(section => {
+        section.classList.add('invisible');
+    });
+}
 
+invisibleSections();
 // ----- SCROLL VISIBILITY FUNCTION ----- //
+function scrollFunction(){
+    const sections = document.querySelectorAll('main>section:not(:first-child');
+    
+    let isInViewport = function (elem){
+        return (
+            elem.top <= window.innerHeight
+        );
+    };
+    
+    
 
-window.addEventListener('scroll', function() {
-    //console.log(window.scrollY);
-	let triggeredHonors;
-    if(window.scrollY > 50 && triggeredHonors !== true) {
-        document.querySelector('#awards').style.opacity = "1";
-        triggeredHonors = true;
-    }
-    if (window.scrollY > 50){
-        document.querySelector('header').classList.add("header-shrink");
-        document.querySelector('.header-content').classList.add("header-content-shrink");
-        document.querySelector('h1').classList.add("h1-shrink");
-        //setWelcomeSectionHeight();
-    }
-    if (window.scrollY < 50){
-        document.querySelector('header').classList.remove("header-shrink");
-        document.querySelector('.header-content').classList.remove("header-content-shrink");
-        document.querySelector('h1').classList.remove("h1-shrink");
-        //setWelcomeSectionHeight();
-    }
-        
-});
+    window.addEventListener('scroll', function() {
+        let sectionObj = [];
+        sections.forEach(section => sectionObj.push({
+            "section": section,
+            "bounding": section.getBoundingClientRect()
+        }));
+
+        sectionObj.forEach(section => {
+            if (isInViewport(section.bounding)){
+                section.section.classList.add('visible');
+            }
+        });
+
+        if (window.scrollY > 50){
+            document.querySelector('header').classList.add("header-shrink");
+            document.querySelector('.header-content').classList.add("header-content-shrink");
+            document.querySelector('h1').classList.add("h1-shrink");
+        }
+        if (window.scrollY < 50){
+            document.querySelector('header').classList.remove("header-shrink");
+            document.querySelector('.header-content').classList.remove("header-content-shrink");
+            document.querySelector('h1').classList.remove("h1-shrink");
+        }
+            
+    });
+}
+
+scrollFunction();
 
 //----- HIDE NAV ON SCROLL DOWN, SHOW ON SCROLL UP -----//
 
@@ -134,12 +165,3 @@ function expandPublications(){
 }
 
 expandPublications();
-
-//----- EXPAND CONTACT ME -----//
-document.querySelector('#contact-btn').addEventListener("click", (e) => {
-    let contactExpanded = document.querySelector('.contact-expanded');
-    console.log(contactExpanded);
-    contactExpanded.classList.toggle('contact-expanded-active');
-    console.log(contactExpanded.classList);
-});
-

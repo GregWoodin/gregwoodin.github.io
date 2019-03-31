@@ -87,6 +87,7 @@
     p{
         grid-area: text;
         padding-right: 20px;
+        color: black;
         @media (max-width: $small-phone-sizing){
             padding-right: 0;
         }

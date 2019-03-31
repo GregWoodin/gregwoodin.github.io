@@ -139,8 +139,12 @@ nav a {
     font-size: 31px;
   }
 }
+@font-face {
+  font-family: FuturaMobile;
+  src: url("../fonts/futura medium bt.ttf");
+}
 * {
-  font-family: futura;
+  font-family: Futura, FuturaMobile;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -175,7 +179,7 @@ main {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1150px;
   width: 80%;
   height: 100%;
   padding-top: 20px;
@@ -255,6 +259,16 @@ a {
 
 #about {
   margin-top: 40px;
+}
+
+.visible {
+  opacity: 1 !important;
+  transition: 3s ease-in-out;
+}
+
+.invisible {
+  opacity: 0;
+  transition: 3s ease-in-out;
 }
 
 @media only screen and (max-width: 920px) {
@@ -431,7 +445,6 @@ a {
   }
 }
 #awards {
-  opacity: 0;
   transition: 2s ease;
 }
 
@@ -441,7 +454,6 @@ a {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: 150px auto;
-  justify-items: center;
   height: 600px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   position: relative;
@@ -462,9 +474,14 @@ a {
 }
 
 .awards-content-inner {
-  padding: 40px 30px 40px 0;
+  padding: 60px 30px 30px 0;
   height: 600px;
   overflow-y: scroll;
+}
+@media (max-width: 920px) {
+  .awards-content-inner {
+    height: 400px;
+  }
 }
 .awards-content-inner h4 {
   margin-bottom: 10px;
@@ -487,7 +504,7 @@ a {
 }
 
 .awards-years {
-  padding: 40px 0;
+  padding: 60px 0;
   display: flex;
   width: 100%;
   background-color: #eaf7f3;
@@ -495,7 +512,7 @@ a {
 .awards-years ul {
   list-style: none;
   position: relative;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -508,6 +525,11 @@ a {
   bottom: 0;
   width: 2px;
   background-color: rgba(30, 30, 30, 0.1);
+}
+@media (max-width: 920px) {
+  .awards-years ul {
+    height: 250px;
+  }
 }
 .awards-years ul li {
   position: relative;
@@ -641,6 +663,7 @@ a {
 .publication-item p {
   grid-area: text;
   padding-right: 20px;
+  color: black;
 }
 @media (max-width: 460px) {
   .publication-item p {
@@ -703,6 +726,14 @@ a {
   display: flex;
   flex-direction: column;
 }
+.conferences-container p {
+  font-size: 19px;
+}
+@media (max-width: 920px) {
+  .conferences-container p {
+    font-size: 17px;
+  }
+}
 .conferences-container li {
   display: grid;
   align-items: center;
@@ -710,6 +741,7 @@ a {
   grid-template-columns: 100px auto;
   grid-template-areas: "icon header" "icon text";
   margin-bottom: 30px;
+  padding-right: 20px;
 }
 .conferences-container li:last-of-type {
   margin-bottom: 0px;
@@ -724,15 +756,21 @@ a {
     grid-template-columns: 1fr;
     grid-template-areas: "icon" "header" "text";
     text-align: center;
+    padding-right: 0;
   }
 }
 .conferences-container h4 {
   grid-area: header;
-  font-size: 18px;
+  font-size: 19px;
 }
 @media (max-width: 460px) {
   .conferences-container h4 {
     margin-bottom: 5px;
+  }
+}
+@media (max-width: 920px) {
+  .conferences-container h4 {
+    font-size: 17px;
   }
 }
 .conferences-container p {
