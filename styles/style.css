@@ -629,19 +629,6 @@ section:last-of-type {
     text-align: center;
   }
 }
-.publication-item .image {
-  grid-area: image;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100px;
-  height: 100%;
-}
-@media (max-width: 601px) {
-  .publication-item .image {
-    display: none;
-  }
-}
 .publication-item .publication-icon {
   grid-area: icon;
   align-self: center;
@@ -684,6 +671,18 @@ section:last-of-type {
 }
 .publication-item:hover {
   background-color: #98D9C2;
+}
+
+.publication-image {
+  object-fit: cover;
+  grid-area: image;
+  min-height: 100px;
+  width: 100%;
+}
+@media (max-width: 601px) {
+  .publication-image {
+    display: none;
+  }
 }
 
 .expanded-publication {

@@ -36,19 +36,6 @@
     }
     
     //background-color: rgba(white, 0.8);
-
-    .image{
-        grid-area: image;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        min-height: 100px;
-        height: 100%;
-        @media (max-width: $large-phone-sizing){
-            display: none;
-        }
-    }
-
     .publication-icon{
         grid-area: icon;
         align-self: center;
@@ -99,6 +86,16 @@
 
 }
 
+.publication-image{
+    object-fit: cover;
+    grid-area: image;
+    min-height: 100px;
+
+    width: 100%;
+    @media (max-width: $large-phone-sizing){
+        display: none;
+    }
+}
 
 
 
