@@ -602,7 +602,6 @@ section:last-of-type {
 .publication-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(auto, auto 0px);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   background-color: rgba(255, 255, 255, 0.8);
   padding: 40px 20px;
@@ -628,6 +627,10 @@ section:last-of-type {
     grid-template-areas: "icon" "text";
     text-align: center;
   }
+}
+.publication-item:hover .expanded-publication {
+  transform: scale(1, 1);
+  opacity: 1;
 }
 .publication-item .publication-icon {
   grid-area: icon;
@@ -686,19 +689,23 @@ section:last-of-type {
 }
 
 .expanded-publication {
-  height: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+  height: auto;
   background-color: #f1f7f6;
   width: 100%;
   transition: 0.5s ease-in-out;
   overflow: hidden;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
   font-family: "helvetica neue";
   font-weight: 200;
   opacity: 0;
   line-height: 25px;
   font-size: 18px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1, 0);
+  transform-origin: top;
 }
 
 .expanded-active {

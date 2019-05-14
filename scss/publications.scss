@@ -1,7 +1,6 @@
 .publication-container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto, auto 0px);
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
     background-color: rgba(255,255,255,0.8);
     padding: 40px 20px;
@@ -33,6 +32,13 @@
         "text"
         ;
         text-align: center;
+    }
+
+    &:hover{
+        .expanded-publication{
+            transform: scale(1,1);
+            opacity: 1;
+        }
     }
     
     //background-color: rgba(white, 0.8);
@@ -101,19 +107,23 @@
 
 
 .expanded-publication{
-    height: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+    height: auto;
     background-color: lighten($pale-green, 10%);
     width: 100%;
     transition: 0.5s ease-in-out;
     overflow: hidden;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 30px;
     font-family: "helvetica neue";
     font-weight: 200;
     opacity: 0;
     line-height: 25px;
     font-size: 18px;
     box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    transform: scale(1,0);
+    transform-origin: top;
     
     
 
