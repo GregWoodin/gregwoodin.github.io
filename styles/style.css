@@ -45,6 +45,11 @@ body {
     padding: 20px 30px;
   }
 }
+@media (max-width: 601px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
 .container--section {
   padding: 40px 0;
 }
@@ -55,7 +60,7 @@ body {
 }
 @media (max-width: 601px) {
   .container--section {
-    padding: 20px;
+    padding: 10px;
     padding-bottom: 50px;
   }
 }
@@ -220,7 +225,7 @@ strong {
 }
 @media (max-width: 601px) {
   .header__branding {
-    font-size: 24px;
+    font-size: 30px;
   }
 }
 .header--hidden {
@@ -284,7 +289,7 @@ strong {
 }
 @media (max-width: 601px) {
   #nav__hamburger {
-    transform: scale(0.6);
+    transform: scale(0.8);
     transform-origin: right;
   }
 }
@@ -522,9 +527,21 @@ strong {
 }
 .awards__inner > h3 {
   margin-bottom: 10px;
+  font-size: 18px;
+}
+@media (max-width: 601px) {
+  .awards__inner > h3 {
+    font-size: 16px;
+  }
 }
 .awards__inner > p {
   margin-bottom: 35px;
+  font-size: 18px;
+}
+@media (max-width: 601px) {
+  .awards__inner > p {
+    font-size: 16px;
+  }
 }
 
 .publications__entry {
@@ -557,6 +574,11 @@ strong {
   .publications__entry {
     grid-template-columns: 1fr;
     padding: 10px;
+  }
+}
+@media (max-width: 601px) {
+  .publications__entry {
+    text-align: center;
   }
 }
 .publications__hr {
@@ -601,6 +623,7 @@ strong {
 }
 .publications__button {
   width: 200px;
+  margin: auto;
   margin-top: 20px;
 }
 .publications__expanded {
@@ -646,7 +669,7 @@ strong {
 @media (max-width: 950px) {
   .conferences__list {
     grid-template-columns: 1fr;
-    grid-gap: 20px;
+    grid-gap: 40px;
   }
 }
 .conferences__item {
@@ -661,6 +684,16 @@ strong {
 }
 .conferences__item > p {
   grid-area: content;
+}
+@media (max-width: 950px) {
+  .conferences__item {
+    padding: 0;
+  }
+}
+@media (max-width: 601px) {
+  .conferences__item {
+    text-align: center;
+  }
 }
 .conferences__header {
   display: flex;
@@ -798,7 +831,7 @@ strong {
 
 .hidden {
   position: relative;
-  top: 200px;
+  top: 100px;
   opacity: 0 !important;
   transition: 1000ms ease-in-out;
 }

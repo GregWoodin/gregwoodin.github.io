@@ -18,7 +18,7 @@
 
         @media (max-width: $tablet-sizing){
             grid-template-columns: 1fr;
-            grid-gap: 20px;
+            grid-gap: 40px;
         }
 
     }
@@ -37,6 +37,14 @@
 
         &>p{
             grid-area: content;
+        }
+
+        @media (max-width: $tablet-sizing){
+            padding: 0;
+        }
+
+        @media (max-width: $large-phone-sizing){
+            text-align: center;
         }
     }
 

@@ -37,6 +37,10 @@
             grid-template-columns: 1fr;
             padding: 10px;
         }
+
+        @media (max-width: $large-phone-sizing){
+            text-align: center;
+        }
     }
 
     &__hr{
@@ -85,6 +89,7 @@
 
     &__button{
         width: 200px;
+        margin: auto;
         margin-top: 20px;
     }    
 

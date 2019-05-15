@@ -57,7 +57,7 @@
         }
 
         @media (max-width: $large-phone-sizing){
-            font-size: 24px;
+            font-size: 30px;
         }
     }
 
@@ -128,7 +128,7 @@
     }
 
     @media (max-width: $large-phone-sizing){
-        transform: scale(0.6);
+        transform: scale(0.8);
         transform-origin: right;
     }
 }

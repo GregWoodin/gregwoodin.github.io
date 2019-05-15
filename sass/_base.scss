@@ -49,6 +49,10 @@ body{
         padding: 20px 30px;
     }
 
+    @media (max-width: $large-phone-sizing){
+        padding: 20px 10px;
+    }
+
     &--section{
         padding: 40px 0;
 
@@ -57,12 +61,9 @@ body{
         }
 
         @media (max-width: $large-phone-sizing){
-            padding: 20px;
+            padding: 10px;
             padding-bottom: 50px;
-        }
-
-
-        
+        } 
     }
 }
 
