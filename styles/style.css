@@ -576,7 +576,7 @@ strong {
     padding: 10px;
   }
 }
-@media (max-width: 601px) {
+@media (max-width: 950px) {
   .publications__entry {
     text-align: center;
   }
@@ -623,8 +623,13 @@ strong {
 }
 .publications__button {
   width: 200px;
-  margin: auto;
   margin-top: 20px;
+}
+@media (max-width: 950px) {
+  .publications__button {
+    margin: auto;
+    margin-top: 20px;
+  }
 }
 .publications__expanded {
   z-index: 2;
