@@ -1,0 +1,91 @@
+@font-face{
+    font-family: FuturaMobile;
+    src: url("../assets/fonts/futura\ medium\ bt.ttf")
+}
+
+*{
+    font-family: futura, FuturaMobile;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 80%;
+    height: 100%;
+    padding: 20px 0;
+
+    @media (max-width: 1060px){
+        width: 100%;
+        padding: 20px 30px;
+    }
+
+    &--section{
+        padding: 40px 0;
+
+        @media (max-width: 1060px){
+            padding: 40px 30px;
+        }
+
+        @media (max-width: $large-phone-sizing){
+            padding: 20px;
+            padding-bottom: 50px;
+        }
+
+
+        
+    }
+}
+
+p{
+    font-size: 21px;
+    font-weight: 300;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: $p-text;
+
+}
+
+h2{
+    font-size: 25px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.main{
+    padding-top: 190px;
+    background-color: $bg-color;
+    // z-index: -1;
+    position: relative;
+
+    @media (max-width: 1060px){
+        padding-top: 110px;
+    }
+
+    @media (max-width: $large-phone-sizing){
+        padding-top: 80px;
+    }
+
+}
+
+strong{
+    color: black !important;
+}

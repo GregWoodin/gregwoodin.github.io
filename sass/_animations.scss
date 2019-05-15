@@ -1,0 +1,13 @@
+.hidden{
+    position: relative;
+    top: 200px;
+    opacity: 0 !important;
+    transition: 1000ms ease-in-out;
+}
+
+.visible{
+    position: relative;
+    top: 0px;
+    opacity: 1 !important;
+    transition: 1000ms ease-in-out;
+}

@@ -1,0 +1,134 @@
+.header{
+    background-image: url("../assets/img/header_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 5px 5px 20px rgba(0,0,0, 0.4);
+    position: fixed;
+    width: 100%;
+    transition: 0.5s ease-in-out;
+    z-index: 1;
+    transform: translateY(0);
+
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        transition: 0.5s ease-in-out;
+        height: 150px;
+        position: static;
+
+        &--shrink{
+            height: 47px;
+            align-items: center !important;
+        }
+
+        @media (max-width: 1060px){
+            height: 70px;
+        }
+
+        @media (max-width: $large-phone-sizing){
+            height: 40px;
+        }
+
+
+    }
+
+    &__branding{
+
+        font-size: 50px;
+        color: black;
+        font-weight: 100;
+        
+        padding: 0 10px;
+        align-self: flex-start;
+
+        transform: scale(1);
+        transform-origin: top left;
+        transition: 0.5s ease-in-out;
+
+        &--shrink{
+            transform: scale(0.7);
+        }
+
+        @media (max-width: 1060px){
+            align-self: center;
+            font-size: 40px;
+        }
+
+        @media (max-width: $large-phone-sizing){
+            font-size: 24px;
+        }
+    }
+
+    &--hidden{
+        transform: translateY(-100%);
+    }
+}
+
+.nav{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    transition: 250ms ease-in-out;
+
+    &__item{
+        display: inline-block;
+        padding: 10px 15px;
+        transition: 250ms ease-in-out;
+
+        &:hover{
+            color: white;
+            background-color: $highlight-color;
+        }
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 1060px){
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 10px;
+
+        transform-origin: top;
+        transform: scale(1,0);
+
+        &__item{
+            opacity: 0;
+            display: block;
+
+            &--active{
+                opacity: 1;
+            }
+        }
+
+    }
+
+    &--active{
+        transform: scale(1,1);
+    }
+
+}
+
+#nav__hamburger{
+    display: none;
+    position: relative;
+    padding: 10px;
+    transition: 0.5s ease-in-out;
+    align-self: center;
+
+    @media (max-width: 1060px){
+        display: block;
+    }
+
+    @media (max-width: $large-phone-sizing){
+        transform: scale(0.6);
+        transform-origin: right;
+    }
+}

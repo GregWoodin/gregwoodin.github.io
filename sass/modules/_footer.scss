@@ -1,0 +1,128 @@
+.contact{
+    border-top: 5px solid rgba($highlight-color,0.5);
+    background-color: lighten($bg-color, 5%);
+    &__content{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-gap: 40px;
+        grid-template-areas:
+            "links button";
+        
+        @media (max-width: 760px){
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "button"
+                "links";
+        }
+    }
+
+    &__links{
+        grid-area:links;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__entry{
+        display: flex;
+        align-items: center;
+        padding: 10px 20px 10px 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
+        &:hover{
+            background-color: rgba($bg-color, 0.7);
+            
+        }
+
+        &>.OSF-img{
+            width: 50px;
+        }
+
+        @media (max-width: 760px){
+            display: inline-flex;
+        }
+    }
+
+
+    &__link-details{
+        
+
+        &>p{
+            font-size: 22px;
+            color: $p-text;
+            margin-left: 10px;
+            font-weight: 400;
+            padding-bottom: 4px;
+            margin-bottom: 4px;
+            border-bottom: 1px solid rgba($highlight-color, 0.3);
+
+            &:last-of-type{
+                font-weight: 300;
+                color: darken($highlight-color,30%);
+                font-size: 14px;
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    &__icon{
+        background-color: transparent;
+
+        .icon__content{
+            font-size: 35px;
+            color: rgb(53,56,55);
+        }
+
+    }
+
+    &__details{
+        grid-area:button;
+
+        padding: 30px;
+        background-color: lighten($bg-color,10%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+
+    }
+
+    &__button{
+        margin-top: 30px;
+        width: 300px;
+    }
+}
+
+.footer{
+    font-size: 14px;
+    background-color: $highlight-color;
+    color: $p-text;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__right{
+        margin-bottom: 10px;
+        text-align: center;
+        &>a{
+            display: inline;
+            color: black;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}

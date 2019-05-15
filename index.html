@@ -4,346 +4,376 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="img/GW3.png">
+
+    <link rel="icon" href="assets/img/favicon.png">
     <title>Greg Woodin</title>
     <meta name="description" content="Linguist and cognitive scientist at the University of Birmingham."/>
+
     <!-- MAIN STYLESHEET -->
     <link rel="stylesheet" href="styles/style.css">
+
     <!-- HAMBURGER MENU -->
     <link rel="stylesheet" href="styles/hamburgers.css">
+
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+    <!-- MATERIAL ICONS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
 </head>
+
 <body>
     <!-- HEADER -->
-    <header id = "header">
+    <header class="header" id="header">
         <div class="container">
-            <div class = "header-content">
-                <h1>Greg Woodin</h1>
+            <div class="header__content">
+                <h1 class="header__branding card--green">Greg Woodin</h1>
 
-                <!-- HAMBURGER BUTTON -->
-                <button class="hamburger hamburger--squeeze" id = "hamburger-menu" type="button">
+                <!-- Hamburger Icon -->
+                <button id = "nav__hamburger" class= "card--green hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
-                
-                <!-- NAVIGATION MENU -->
-                <nav>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#awards">Awards</a></li>
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#conferences">Conferences</a></li>
-                        <li><a href="#links-section">Contact Me</a></li>
-                    </ul>
+
+                <!-- Navigation Menu -->
+                <nav class="nav card--green">
+                    <a href="#about" class="nav__item">About</a>
+                    <a href="#awards" class="nav__item">Awards</a>
+                    <a href="#publications" class="nav__item">Publications</a>
+                    <a href="#conferences" class="nav__item">Conferences</a>
+                    <a href="#contact" class="nav__item">Contact Me</a>
                 </nav>
             </div>
         </div>
     </header>
-    <!-- HEADER END -->
 
+    <main class = "main">
+        <!-- ABOUT -->
+        <section class="about" id="about">
+            <div class="container container--section">
+                <div class="card about__content">
 
-    <!-- MAIN START -->
-    <main>
-        <!-- ABOUT SECTION -->
-        <section id = "about">
+                    <img src="assets/img/about_headshot.jpg" alt="Greg Woodin Headshot" class="about__image">
 
-            <div class="container">
-                    <!-- <h2>About Me</h2> -->
-                <div class="about-container">
-
-                    <div class="profile-image"></div>
-
-                    <div class="about-button-container">
-                        <a id = "cv-btn" class = "button" href="files/CV_academic_new.pdf">Download CV</a>
-                        <a href = "mailto:gawoodin@gmail.com" id = "contact-btn" class = "button">Contact Me
-                        </a>
+                    <div class="about__buttons">
+                        <a href="files/CV_academic_new.pdf" class="button button--primary">Download CV</a>
+                        <a href="mailto:gawoodin@gmail.com" class="button button--primary">Contact Me</a>
+                    </div>
+                    <div class="about__text">
+                        <h2 class="about__lead">I'm Greg Woodin, an ESRC-funded linguist and cognitive scientist studying for an MA Social Research at the University of Birmingham, UK.</h3>
+                        <p class="about__paragraph">My research focuses on metaphorical thought processes, especially those where there is an association between space and some other domain, such as numerical quantity or emotional valence. I investigate these thought processes experimentally and through corpus studies where I analyse how speakers in the TV News Archive gesture when they use certain metaphors in their speech.</p>
+                        <p class="about__paragraph">In a more applied context, I look at how spatial metaphors can either aid or impede understanding of different data visualisations, such as bar charts. An overarching theme in my work is the idea that metaphorical thinking involves mental simulation of a metaphor’s source domain, such as space. My PhD research will focus on numerical cognition and how to effectively communicate about numbers.</p>
                     </div>
 
-                    <div class="about-text-container">
-                        <h3>I'm Greg Woodin, an ESRC-funded linguist and cognitive scientist studying for an MA Social Research at the University of Birmingham, UK.</h3>
-                        <p>My research focuses on metaphorical thought processes, especially those where there is an association between space and some other domain, such as numerical quantity or emotional valence. I investigate these thought processes experimentally and through corpus studies where I analyse how speakers in the TV News Archive gesture when they use certain metaphors in their speech.</p>
-                        <p>In a more applied context, I look at how spatial metaphors can either aid or impede understanding of different data visualisations, such as bar charts. An overarching theme in my work is the idea that metaphorical thinking involves mental simulation of a metaphor’s source domain, such as space. My PhD research will focus on numerical cognition and how to effectively communicate about numbers.</p>
-                    </div>
+                    <div class="education">
+                        <!-- ADDING NEW EDUCATION -->
+                        <!-- PASTE BELOW THIS LINE -->
 
-                    <div class="education-container">
-                        <div class="education-component">
-                            <div class = "education-icon">
-                                <i class="fas fa-graduation-cap"></i>
+
+                        <!-- COPY FROM HERE -->
+                        <div class="education__entry">
+                            <div class="icon education__icon">
+                                <i class="icon__content fas fa-graduation-cap"></i>
                             </div>
-                            <div class="education-text">
-                                <h4>MA by Research</h4>
-                                <p>English Language & Applied Linguistics</p>
-                                <p>University of Birmingham</p>
+                            <div class="education__text">
+                                <h3 class="education__title">MA by Research</h4>
+                                <p class="education__p">English Language & Applied Linguistics</p>
+                                <p class="education__p">University of Birmingham</p>
                             </div>
                         </div>
-                        <div class="education-component">
-                            <div class = "education-icon">
-                                <i class="fas fa-graduation-cap"></i>
+                        <!-- TO HERE -->
+
+                        <div class="education__entry">
+                            <div class="icon education__icon">
+                                <i class="icon__content fas fa-graduation-cap"></i>
                             </div>
-                            <div class="education-text">
-                                <h4>BA (hons.)</h4>
-                                <p>First class degree in English Language</p>
-                                <p>University of Birmingham</p>
+                            <div class="education__text">
+                                <h3 class="education__title">BA (hons.)</h4>
+                                <p class="education__p">First class degree in English Language.</p>
+                                <p class="education__p">University of Birmingham</p>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-        <!-- ABOUT SECTION END -->
 
-        <!-- ABOUT SECTION SPARES
-        I begin my PhD in September 2019 under the supervision of Dr Bodo Winter, Professor Jeannette Littlemore and Dr Marcus Perlman in the Department of English Language and Linguistics. My MA and PhD are fully funded by the Economic and Social Research Council.
-        
-        -->
+        <!-- PUBLICATIONS -->
+        <section class="publications" id="publications">
+            <div class="container container--section">
+                <div class="card publications__content">
+                    <h2 class="section-header">Publications</h2>
 
-        <section id="awards">
-            <div class="container">
-                <div class="twitter-publication-container">
-                    <div class="twitter-timeline-container">
-                        <h2>Twitter</h2>
-                        <a class="twitter-timeline" width = "100%" height = "600px" data-theme="light" data-link-color="#19CF86" href="https://twitter.com/greg_woodin?ref_src=twsrc%5Etfw">Tweets by greg_woodin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <!-- INSTRUCTIONS FOR ADDING NEW ENTRY -->
+                    <!-- The publications__hr tag at the bottom is the line between the entries -->
+                    <!-- <strong>Enter bold text here</strong> -->
+                    <!-- Put the link you want the button to go to in between the double quotes after <a href =  -->
+
+                    <!-- PASTE BELOW THIS LINE IF ADDING TO THE TOP -->
+
+                    <!-- COPY FROM HERE -->
+                    <div class="publications__entry">
+                        <img src="assets/img/pub_ritual.jpg" alt="" class="publications__img">
+                        <div class="publications__text">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon fas fa-pencil-alt"></i>
+                                <div class="conferences__info">accepted • Ad Alta: the Birmingham Journal of Literature.</div>
+                            </div>
+                            <h3><strong>Woodin, G.</strong></h3>
+                            <p>Ritual</p>
+                            <a href="https://www.birmingham.ac.uk/schools/edacs/departments/english/research/journals/adalta.aspx" class="button publications__button">Find out more</a>
+                        </div>
+                        <p class="publications__expanded">
+                            Poem
+                        </p>
                     </div>
+                    <hr class="publications__hr">
+                    <!-- TO HERE -->
+
+                    <div class="publications__entry">
+                        <img src="assets/img/pub_news-archive.png" alt="" class="publications__img">
+                        <div class="publications__text">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon fas fa-newspaper"></i>
+                                <div class="conferences__info">submitted • PLOS One</div>
+                            </div>
+                            <h3><strong>Woodin, G.</strong>, Winter, B., Perlman, M., Littlemore, J., Matlock, T.</h3>
+                            <p>Metaphoric gestures for numerical quantity and emotional valence in the TV News Archive.</p>
+                            <a href="https://osf.io/dncjg/" class="button publications__button">Find out more</a>
+                        </div>
+                        <p class="publications__expanded">Using the TV News Archive, we showed that, generally, the hands of gesturers mirror the spatial frame implied by concurrent speech (e.g., an upwards-moving gesture for the phrase 'high number'). We also showed that gestures are  more  likely  to  co-occur  with verbs than  adjectives, as are adjectives  that  represent  the extreme  ends  of  a  scale  (‘tiny’,  ‘huge’)  compared  to  less  extreme  adjectives  (‘high’,  ‘low’). Altogether,  our  study is  the  first  large-scale, quantitative  demonstration  that  the TV  News Archive can provide a unique window into metaphorical thought.</p>
+                    </div>
+                    <hr class="publications__hr">
+                    <div class="publications__entry">
+                        <img src="assets/img/pub_abstract-concepts.jpg" alt="" class="publications__img">
+                        <div class="publications__text">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon fas fa-satellite"></i>
+                                <div class="conferences__info">2018 • Frontiers in Psychology, 9, 2169: 1-14</div>
+                            </div>
+                            <h3><strong>Woodin, G.</strong> & Winter, B.</h3>
+                            <p>Placing abstract concepts in space: quantity, time and emotional valence.</p>
+                            <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2018.02169/full" class="button publications__button">Find out more</a>
+                        </div>
+                        <p class="publications__expanded">
+                            In a task where participants placed words in space, participants preferred the vertical axis for quantity words and valence words, and the horizontal axis for numerals and time words. Across all tasks, participants tended to use specific axes (horizontal, vertical), rather than combining these two axes in diagonal responses. These results shed light on the spatial nature of abstract thought.
+                        </p>
+                    </div>
+                    <hr class="publications__hr">
+                    <div class="publications__entry">
+                        <img src="assets/img/pub_aquavira.jpg" alt="" class="publications__img">
+                        <div class="publications__text">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon fas fa-pencil-alt"></i>
+                                <div class="conferences__info">2018 • Ad Alta: the Birmingham Journal of Literature, 10: 27.</div>
+                            </div>
+                            <h3><strong>Woodin, G.</strong></h3>
+                            <p>Aquariva</p>
+                            <a href="https://www.birmingham.ac.uk/schools/edacs/departments/english/research/journals/adalta.aspx" class="button publications__button">Find out more</a>
+                            
+                        </div>
+                        <p class="publications__expanded">
+                            Poem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="thoughts-awards" id = "awards">
+            <div class="container container--section">
+                <div class="thoughts-awards__content">
+                    <section class="twitter">
+                        <h2 class = "section-header">Twitter</h2>
+                        <a class="twitter-timeline" width = "100%" height = "600px" data-theme="light" data-link-color="#19CF86" href="https://twitter.com/greg_woodin?ref_src=twsrc%5Etfw">Tweets by greg_woodin</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </section>
                     
-                    <div class="timeline-container">
-                        <h2>Awards</h2>
-                        <!-- LEFT HAND SIDE YEAR SELECTOR -->
-                        <div class="awards-years">
-                            <ul>
-                                <li class = "awards-year active-year">2018</li>
-                                <li class = "awards-year">2017</li>
-                                <li class = "awards-year">2015</li>
-                                <li class = "awards-year">2014</li>
+                    <section class="awards">
+                        <h2 class = "section-header">Awards</h2>
+                        <div class="awards__selection">
+                            <ul class = "awards__years">
+                                <li class = "awards__year awards__year--active">2018</li>
+                                <li class = "awards__year">2017</li>
+                                <li class = "awards__year">2015</li>
+                                <li class = "awards__year">2014</li>
                             </ul>
                         </div>
-    
-                        <!-- CONTENT TO BE ENTERED - YEARLY CONTENT
-                            
-                            <h4> Insert heading of honour/award here </h4>
-                            <p> Insert information about honour here, such as amount awarded, or further explanation</p>
-                        
-                        
-                        -->
-    
-                        <!-- RIGHT HAND SIDE YEARLY CONTENT -->
-                        <div class="awards-content">
-                            <div class="awards-content-inner-container">
-                                <div class="awards-content-inner">
-                                    <h4>Constance Naden Medal</h4>
+                        <div class="awards__content">
+                            <div class="awards__list">
+                                <div class="awards__inner">
+                                    <h3>Constance Naden Medal</h3>
                                     <p>Given to the student who submits the highest quality thesis for the MPhil/MRes/MA by Research degree across the College of Arts and Law.</p>
-                                    <h4>Awarded ESRC Midlands Graduate School DTP Studentship</h4>
+                                    <h3>Awarded ESRC Midlands Graduate School DTP Studentship</h3>
                                     <p>Annual payment consists of course fees (£4,260) and a maintenance award (£14,777). </p>
-                                    <h4>Offered AHRC Midlands3Cities DTP Studentship</h4>
+                                    <h3>Offered AHRC Midlands3Cities DTP Studentship</h3>
                                     <p>£14,777 course fees + £4,260 maintenance award</p>
                                 </div>
-                                <div class="awards-content-inner">
-                                    <h4>Highly Commended in Language & Linguistics.</h4>
+                                <div class="awards__inner">
+                                    <h3>Highly Commended in Language & Linguistics.</h3>
                                     <p>The Undergraduate Awards Programme 2017.</p>
-                                    <h4>College of Arts & Law Masters MA by Research Scholarship.</h4>
+                                    <h3>College of Arts & Law Masters MA by Research Scholarship.</h3>
                                     <p>English Language and Applied Linguistics at the University of Birmingham, 2017/18. £4,195.</p>
-                                    <h4>Gwyneth Fox Award.</h4>
+                                    <h3>Gwyneth Fox Award.</h3>
                                     <p>Awarded to the student with the highest mark overall (80.291) enrolled on the English Language or the English Language and Linguistics single honours programmes. £250.</p>
                                 </div>
-                                <div class="awards-content-inner">
-                                    <h4>Vera Adamson Prize</h4>
+                                <div class="awards__inner">
+                                    <h3>Vera Adamson Prize</h3>
                                     <p>Given to the first year undergraduate deemed to have produced “the most outstanding work in the field of Modern English Language”. £100.</p>
-                                    <h4>Sonnenschein Prize</h4>
+                                    <h3>Sonnenschein Prize</h3>
                                     <p>Given to “first year students whose performance in their examinations is deemed to be of sufficient merit”. £75.</p>
-                                    <h4>Notting Hill Editions Essay Prize 2015</h4>
+                                    <h3>Notting Hill Editions Essay Prize 2015</h3>
                                     <p>Longlisted amongst names such as Hilary Mantel.</p>
                                 </div>
                                 
-                                <div class="awards-content-inner">
-                                    <h4>Awarded Access to Birmingham (A2B) Scholarship for undergraduate study.</h4>
+                                <div class="awards__inner">
+                                    <h3>Awarded Access to Birmingham (A2B) Scholarship for undergraduate study.</h3>
                                     <p>£4500</p>
-                                    <h4>Unconditional offer for undergraduate study in BA English Language.</h4>
+                                    <h3>Unconditional offer for undergraduate study in BA English Language.</h3>
                                     <p>University of Birmingham</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-                
-            </div>
-        </section>   
-        <!-- AWARDS SCROLL SECTION END -->
-                
-        <!-- PUBLICATIONS SECTION START -->
-        <section id = "publications">
-            <div class="container">
-                
-                <div class="publication-container">
-                        <h2>Publications</h2>
-
-
-
-                        <div class="publication-item">
-                            <div class="publication-icon">
-                                <i class="far fa-newspaper"></i>
-                            </div>
-                            <p><span class = "bold">Woodin, G.</span> (accepted) Ritual. Ad Alta: the Birmingham Journal of Literature.</p>
-                            <img src="img/building.jpg" alt="" class="publication-image">
-                            <i class="fas fa-chevron-down"></i>
-                            <div class="expanded-publication">Poem.</div>
-                        </div>
-                        
-
-
-
-                        <div class = "publication-item">
-                            <div class="publication-icon">
-                                <i class="far fa-newspaper"></i>
-                            </div>
-                            <p><span class = "bold">Woodin, G.</span>, Winter, B., Perlman, M., Littlemore, J., Matlock, T. (submitted). Metaphoric gestures for numerical quantity and emotional valence in the TV News Archive. PLOS One.</p>
-                            <img src="img/news_archive_article.png" alt="" class="publication-image">
-                            <i class="fas fa-chevron-down"></i>
-                            <div class="expanded-publication">Using the TV News Archive, we showed that, generally, the hands of gesturers mirror the spatial frame implied by concurrent speech (e.g., an upwards-moving gesture for the phrase 'high number'). We also showed that gestures are  more  likely  to  co-occur  with verbs than  adjectives, as are adjectives  that  represent  the extreme  ends  of  a  scale  (‘tiny’,  ‘huge’)  compared  to  less  extreme  adjectives  (‘high’,  ‘low’). Altogether,  our  study is  the  first  large-scale, quantitative  demonstration  that  the TV  News Archive can provide a unique window into metaphorical thought.</div>
-                        </div>
-                        
-                        
-
-                        
-                        <div class="publication-item">
-                            <div class="publication-icon">
-                                <i class="fas fa-satellite"></i>
-                            </div>
-                            <p><span class = "bold">Woodin, G</span>. & Winter, B. (2018). Placing abstract concepts in space: quantity, time and emotional valence. Frontiers in Psychology, 9, 2169: 1-14.</p>
-                            <img src="img/abstract_concepts_paper.jpg" alt="" class="publication-image">
-                            <i class="fas fa-chevron-down"></i>
-                            <div class="expanded-publication">In a task where participants placed words in space, participants preferred the vertical axis for quantity words and valence words, and the horizontal axis for numerals and time words. Across all tasks, participants tended to use specific axes (horizontal, vertical), rather than combining these two axes in diagonal responses. These results shed light on the spatial nature of abstract thought.</div>
-                        </div>
-                        
-
-
-
-                        <div class="publication-item">
-                            <div class="publication-icon">
-                                <i class="fas fa-pencil-alt"></i>
-                            </div>
-                            <p><span class = "bold">Woodin, G.</span> (2018). Aquariva. Ad Alta: the Birmingham Journal of Literature, 10: 27.</p>
-                            <img src="img/aquavira.jpg" alt="" class="publication-image">
-                            <i class="fas fa-chevron-down"></i>
-                            <div class="expanded-publication">Poem.</div>
-                        </div>
-                        
-
-
-
-                    </div>
             </div>
         </section>
-        <!-- CONFERENCE SECTION END -->
-        <section id="conferences">
-            <div class="container">
-                
-                <div class="conferences-container">
-                    <h2>Conferences</h2>
-                    <img src="img/conference-pic.jpg" alt="">
-                    <ul>
-                        <li>
-                            <div class="conference-image">
-                                <i class="material-icons">airplanemode_active</i>
+        
+        <section class="conferences" id="conferences">
+            <div class="container container--section">
+                <div class="card conferences__content">
+                    <h2 class="section-header">Conferences</h2>
+                    <img src="assets/img/conference_img.jpg" alt="Greg Woodin presenting at a conference" class="conferences__img">
+                    <ul class="conferences__list">
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">airplanemode_active</i>
+                                <div class="conferences__info">TALK • LUND UNIVERSITY</div>
                             </div>
-                            <h4>The 12th International Symposium on Iconicity in Language and Literature 2019 – Talk – Lund University </h4>
+                            
+                            <h3>The 12th International Symposium on Iconicity in Language and Literature 2019</h3>
+                            
                             <p>‘Degrees of metaphoricity: a large-scale, quantitative analysis of iconic gestures in the TV News Archive’</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <i class="material-icons">train</i>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">train</i>
+                                <div class="conferences__info">TALK • UNIVERSITY OF BIRMINGHAM</div>
                             </div>
-                            <h4>Birmingham English Language Postgraduate Conference 2019 – Talk – University of Birmingham </h4>
+ 
+                            <h3>Birmingham English Language Postgraduate Conference 2019</h3>
                             <p>‘Degrees of metaphoricity: a large-scale, quantitative analysis of gestures in the TV News Archive’</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <i class="material-icons">train</i>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">train</i>
+                                <div class="conferences__info">POSTER • UNIVERSITY OF OXFORD</div>
                             </div>
-                            <h4>The Creative Power of Metaphor 2019 – Poster – University of Oxford </h4>
+                            <h3>The Creative Power of Metaphor 2019</h3>
                             <p>‘Degrees of metaphoricity: a quantitative gesture analysis’</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <i class="material-icons">airplanemode_active</i>
-                            </div>
-                            <h4>Spatial Cognition 2018 – Poster – University of Tübingen </h4>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">airplanemode_active</i>
+                                <div class="conferences__info">POSTER • UNIVERSITY OF Tübingen</div>
+                            </div>                           
+                            <h3>Spatial Cognition 2018</h3>
                             <p>‘Placing abstract concepts in space: quantity, time and emotional valence’</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <div class="conference-image">
-                                    <i class="material-icons">train</i>
-                                </div>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">train</i>
+                                <div class="conferences__info">POSTER • UNIVERSITY OF NOTTINGHAM</div>
                             </div>
-                            <h4>Figurative Language: Experimental and Corpus-Based Studies 2018 – Poster – University of Nottingham </h4>
+                            <h3>Figurative Language: Experimental and Corpus-Based Studies 2018</h3>
                             <p>‘Thinking metaphorically: what do figurative language and metaphoric gestures reveal about thought?’</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <i class="material-icons">airplanemode_active</i>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">airplanemode_active</i>
+                                <div class="conferences__info">TALK • Hong Kong Polytechnic University</div>
                             </div>
-                            <h4>Researching and Applying Metaphor 2018 – Talk – Hong Kong Polytechnic University </h4>
+                            <h3>Researching and Applying Metaphor 2018</h3>
                             <p>‘The continuity of metaphor? Horizontal and vertical metaphors in the spatialization of time, quantity and valence’. Fully funded by School of English, Drama, American and Canadian Studies (£575) and College of Arts & Law Graduate School PG Research Support Fund (£280).</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <div class="conference-image">
-                                    <i class="material-icons">train</i>
-                                </div>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">train</i>
+                                <div class="conferences__info">POSTER • UNIVERSITY OF BIRMINGHAM</div>
                             </div>
-                            <h4>Research Poster Conference 2018 – Poster – University of Birmingham </h4>
+
+                            <h3>Research Poster Conference 2018</h3>
                             <p>‘Thinking metaphorically: what do language and gesture reveal about thought?’</p>
                         </li>
-                        <li>
-                            <div class="conference-image">
-                                <div class="conference-image">
-                                    <i class="material-icons">train</i>
-                                </div>
+                        <li class = "conferences__item">
+                            <div class="conferences__header">
+                                <i class="icon__content conferences__icon material-icons">train</i>
+                                <div class="conferences__info">TALK • University of Birmingham</div>
                             </div>
-                            <h4>Birmingham English Language Postgraduate Conference 2018 – Talk – University of Birmingham</h4>
+                            <h3>Birmingham English Language Postgraduate Conference 2018</h3>
                             <p>‘Metaphors of space: recent developments and new questions in Conceptual Metaphor Theory’</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
-        <section id="links-section">
-            <div class="container">
-                <div class="links-container">
-                    <div class="email">Want to get in touch or find out more? Email me at
-                            <a href="mailto:gawoodin@gmail.com">gawoodin@gmail.com</a>
+        <section class="contact" id="contact">
+            <div class="container container--section">
+                <div class="contact__content">
+                    <div class="contact__links">
+                        <a href = "https://twitter.com/greg_woodin?lang=en" class = "contact__entry">
+                            <div class = "icon contact__icon">
+                                <i class="icon__content fab fa-twitter"></i>
+                            </div>
+                            <div class="contact__link-details">
+                                <p>greg_woodin</p>
+                                <p>Catch up with my latest thoughts.</p>
+                            </div>
+                            
+                        </a>
+
+                        <a href = "https://songswithoutmusicblog.wordpress.com/" class = "contact__entry">
+                            <div class = "icon contact__icon">
+                                <i class="icon__content fab fa-wordpress"></i>
+                            </div>
+                            <div class="contact__link-details">
+                                <p>songswithoutmusic</p>
+                                <p>Read my poems.</p>
+                            </div>
+                            
+                        </a>
+                        
+                        <a href = "https://osf.io/peyxc/" class = "contact__entry">
+                            <img class = "OSF-img" src="assets/img/footer_osf.png" alt="">
+                            <div class="contact__link-details">
+                                <p>OSF</p>
+                                <p>View my pre-prints, data & code.</p>
+                            </div>
+                            
+                        </a>
                     </div>
-                    <div class="links">
-                        <a href = "https://twitter.com/greg_woodin?lang=en"><i class="fab fa-twitter"></i></a>
-                        <a href = "https://github.com/GregWoodin"><i class="fab fa-github"></i></a>
-                        <a href = "https://songswithoutmusicblog.wordpress.com/"><i class="fab fa-wordpress"></i></a>
-                        <a href = "https://osf.io/peyxc/"><img src="img/osf.png" alt=""></a>
+                    <div class="contact__details">
+                        <h2>Want to get in touch or find out more?</h2>
+                        <a class = "button button--primary contact__button" href="mailto:gawoodin@gmail.com">Email Me</a>
                     </div>
-                    
                 </div>
             </div>
         </section>
-        <footer>
+        <footer class="footer">
             <div class="container">
-                <div class="footer-container">
-                    <div class="left">
-                        <div class="copyright"> &copy; 2019 Greg Woodin.</div>
+                <div class="footer__content">
+                    <div class="footer__right">
+                        Website design by Daniel Cornock @ <a href="www.danielcornock.co.uk">www.danielcornock.co.uk</a><br>
+                        Headshot provided by Connor Gordon @ <a href="https://connorgordonphoto.com/">www.connorgordonphoto.com</a>
                     </div>
-                    <div class="right">
-                        <div class="designed-by">Website designed by <a href="https://www.danielcornock.co.uk">Daniel Cornock</a></div>
-                        <div class="photos-by">Headshot provided by <a href="https://connorgordonphoto.com/">Connor Gordon</a></div>
+                    <div class="footer__left">
+                        &copy; Greg Woodin 2019.
                     </div>
                 </div>
             </div>
         </footer>
     </main>
-    <!-- MAIN END -->
-
     <script src = "script.js"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+.conferences{
+    &__content{
+
+    }
+
+    &__img{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        margin: 0px auto 40px auto;
+        display: block;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+
+        @media (max-width: $tablet-sizing){
+            grid-template-columns: 1fr;
+            grid-gap: 20px;
+        }
+
+    }
+
+    &__item{
+        list-style: none;
+        padding: 20px;
+        background-color: rgba($bg-color, 8%);
+
+        &>h3{
+            grid-area: title;
+            margin: 10px 0 5px;
+            padding-bottom: 5px;
+
+        }
+
+        &>p{
+            grid-area: content;
+        }
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        border-bottom: 2px solid rgba($highlight-color,0.7);
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        @media (max-width: $large-phone-sizing){
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__info{
+        font-size: 15px;
+        color: grey;
+        text-transform: uppercase;
+    }
+
+    &__icon{
+        grid-area: icon;
+        margin: 0 15px;
+        color: $highlight-color;
+
+        @media (max-width: $large-phone-sizing){
+            margin-bottom: 10px;
+        }
+
+    }
+}
