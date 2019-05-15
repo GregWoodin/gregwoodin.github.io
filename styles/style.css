@@ -84,6 +84,7 @@ a {
 .main {
   padding-top: 190px;
   background-color: #CFE6E0;
+  z-index: -1;
   position: relative;
 }
 @media (max-width: 1060px) {
