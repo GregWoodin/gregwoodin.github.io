@@ -807,6 +807,8 @@ strong {
 }
 
 .footer {
+  position: relative;
+  z-index: 4;
   font-size: 14px;
   background-color: #98D9C2;
   color: #4A5759;
@@ -830,15 +832,13 @@ strong {
 }
 
 .hidden {
-  position: relative;
-  top: 100px;
+  transform: translateY(50px);
   opacity: 0 !important;
   transition: 1000ms ease-in-out;
 }
 
 .visible {
-  position: relative;
-  top: 0px;
+  transform: translateY(0px);
   opacity: 1 !important;
   transition: 1000ms ease-in-out;
 }

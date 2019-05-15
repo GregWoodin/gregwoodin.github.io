@@ -1,13 +1,11 @@
 .hidden{
-    position: relative;
-    top: 100px;
+    transform: translateY(50px);
     opacity: 0 !important;
     transition: 1000ms ease-in-out;
 }
 
 .visible{
-    position: relative;
-    top: 0px;
+    transform: translateY(0px);
     opacity: 1 !important;
     transition: 1000ms ease-in-out;
 }
