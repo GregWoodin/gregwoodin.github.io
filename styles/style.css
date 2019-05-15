@@ -13,6 +13,25 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: linear-gradient(to bottom, #CFE6E0, rgba(207, 230, 224, 0.7));
+  animation-name: page-fade-in;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.6s;
+  opacity: 0;
+  width: 100%;
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .container {
   margin: 0 auto;
   max-width: 1150px;

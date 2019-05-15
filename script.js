@@ -67,7 +67,7 @@ const mobileMenuToggle = function(){
 }();
 
 const scrollReveal = function(){
-    const sections = document.querySelectorAll('section:not(:first-child');
+    const sections = document.querySelectorAll('section:not(:first-child)');
     sections.forEach(section => section.classList.add('hidden'));
 
     const isInViewport = (elem) => {
