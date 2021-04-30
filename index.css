@@ -604,6 +604,11 @@ strong {
   }
 }
 
+.thoughts-awards {
+  position: relative;
+  z-index: 10;
+}
+
 .thoughts-awards__content {
   display: -ms-grid;
   display: grid;
@@ -624,7 +629,8 @@ strong {
   position: relative;
 }
 
-.timeline-widget, .twitter-timeline {
+.timeline-widget,
+.twitter-timeline {
   -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
           box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
   border-radius: 0px;
@@ -671,7 +677,7 @@ strong {
 }
 
 .awards__years::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
@@ -689,7 +695,7 @@ strong {
 
 .awards__year::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 10px;
   width: 10px;
   top: 50%;
@@ -757,6 +763,11 @@ strong {
   .awards__inner > p {
     font-size: 16px;
   }
+}
+
+.publications {
+  position: relative;
+  z-index: 20;
 }
 
 .publications__entry {
